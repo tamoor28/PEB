@@ -205,11 +205,6 @@ export const translations = {
         "PEB · Projectes d'Enginyeria de Barcelona nace de la iniciativa de dos ingenieros mecánicos con un objetivo claro: que legalizar una instalación o abrir un negocio sea un proceso sencillo y transparente.",
         'Combinamos una sólida formación técnica con un trato directo y personal: hablas siempre con el ingeniero que firma tu proyecto.',
       ],
-      stats: [
-        { value: '2', label: 'ingenieros mecánicos al frente de cada proyecto' },
-        { value: '4', label: 'áreas de especialización' },
-        { value: '1', label: 'único interlocutor durante todo el proceso' },
-      ],
       values: [
         { id: 'rigor', title: 'Rigor técnico', text: 'Cálculos y documentación cuidados al detalle, conforme a la normativa vigente.' },
         { id: 'trato', title: 'Trato directo', text: 'Un único interlocutor durante todo el proceso, sin intermediarios.' },
@@ -480,11 +475,6 @@ export const translations = {
       paragraphs: [
         "PEB · Projectes d'Enginyeria de Barcelona neix de la iniciativa de dos enginyers mecànics amb un objectiu clar: que legalitzar una instal·lació o obrir un negoci sigui un procés senzill i transparent.",
         "Combinem una sòlida formació tècnica amb un tracte directe i personal: parles sempre amb l'enginyer que signa el teu projecte.",
-      ],
-      stats: [
-        { value: '2', label: 'enginyers mecànics al capdavant de cada projecte' },
-        { value: '4', label: "àrees d'especialització" },
-        { value: '1', label: 'únic interlocutor durant tot el procés' },
       ],
       values: [
         { id: 'rigor', title: 'Rigor tècnic', text: "Càlculs i documentació cuidats al detall, d'acord amb la normativa vigent." },

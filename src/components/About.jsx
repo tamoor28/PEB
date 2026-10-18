@@ -18,15 +18,6 @@ export default function About() {
               {paragraph}
             </p>
           ))}
-
-          <dl className="about__stats">
-            {about.stats.map((stat, index) => (
-              <div key={index} className="stat">
-                <dt className="stat__value">{stat.value}</dt>
-                <dd className="stat__label">{stat.label}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
 
         <ul className="about__values">
