@@ -137,8 +137,8 @@ Si alguna plataforma pide PNG, se puede exportar el SVG desde cualquier editor d
 
 La web lleva **datos de ejemplo** que hay que sustituir:
 
-- [ ] `src/data/site.js`: dominio (`url`), `email`, `phone`, titular, NIF y dirección para los textos legales. Si tenéis LinkedIn, añadid la URL.
-- [ ] `index.html` y `ca/index.html`: sustituir `https://www.tudominio.com` por el dominio real (y el email y teléfono de los datos estructurados de `index.html`).
+- [ ] `src/data/site.js`: dominio (`url`), `phone`, titular, NIF y dirección para los textos legales. Si tenéis LinkedIn, añadid la URL. (El `email` ya está puesto: zanisajjad1400@gmail.com.)
+- [ ] `index.html` y `ca/index.html`: sustituir `https://www.tudominio.com` por el dominio real (y el teléfono de los datos estructurados de `index.html`).
 - [ ] `public/robots.txt` y `public/sitemap.xml`: sustituir el dominio.
 - [ ] `src/i18n/translations.js`: revisar el horario de atención y, si queréis, añadir vuestros nombres en la sección «Nosotros».
 - [ ] Revisar los textos legales con un asesor; son una plantilla básica.
