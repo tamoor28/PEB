@@ -161,6 +161,8 @@ Importa el repositorio y usa esta configuración:
 - Comando de compilación: `npm run build`
 - Carpeta de publicación: `dist`
 
+En Netlify no hace falta escribirla: el archivo `netlify.toml` ya la lleva (y fija Node.js 22). Funciona también con el repositorio privado, y cada vez que se suben cambios a la rama elegida la web se actualiza sola.
+
 ## Posicionamiento en Google (SEO)
 
 **Incluido en la web:**

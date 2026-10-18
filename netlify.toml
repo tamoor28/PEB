@@ -1,0 +1,8 @@
+# Configuración para publicar la web en Netlify: se aplica sola al importar el repositorio.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 7 necesita Node.js 20.19 o superior
+  NODE_VERSION = "22"
