@@ -5,7 +5,7 @@ export const site = {
   name: 'PEB',
   legalName: "PEB · Projectes d'Enginyeria de Barcelona",
   url: 'https://www.tudominio.com',
-  email: 'zanisajjad1400@gmail.com',
+  email: 'peb.enginyeria@outlook.com',
   phones: ['+34 612 441 354', '+34 632 37 99 24'],
   city: 'Barcelona',
   // Datos para el aviso legal y la política de privacidad
