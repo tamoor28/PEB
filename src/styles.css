@@ -706,10 +706,9 @@ abbr[title] {
   }
 
   .header__mobile-contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.5rem 1.5rem;
+    display: grid;
+    justify-items: start;
+    gap: 0.5rem;
     font-family: var(--font-mono);
     font-size: 0.85rem;
     color: var(--muted);
@@ -1432,7 +1431,10 @@ abbr[title] {
   color: var(--muted);
 }
 
+/* Bloque para que varios valores (p. ej. dos teléfonos) queden uno debajo de otro */
 .contact-detail__value {
+  display: block;
+  width: fit-content;
   font-weight: 600;
   color: var(--ink);
   overflow-wrap: anywhere;

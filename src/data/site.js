@@ -6,7 +6,7 @@ export const site = {
   legalName: "PEB · Projectes d'Enginyeria de Barcelona",
   url: 'https://www.tudominio.com',
   email: 'zanisajjad1400@gmail.com',
-  phone: '+34 600 000 000',
+  phones: ['+34 612 441 354', '+34 632 37 99 24'],
   city: 'Barcelona',
   // Datos para el aviso legal y la política de privacidad
   holder: '[Nombre y apellidos o razón social]',
@@ -16,4 +16,4 @@ export const site = {
   linkedin: '',
 }
 
-export const phoneHref = `tel:${site.phone.replace(/\s+/g, '')}`
+export const telHref = (phone) => `tel:${phone.replace(/\s+/g, '')}`
