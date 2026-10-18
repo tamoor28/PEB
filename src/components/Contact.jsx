@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
-import { site, telHref } from '../data/site.js'
+import { site } from '../data/site.js'
+import PhoneLinks from './PhoneLinks.jsx'
 
 const OTHER = 'otro'
 
@@ -35,8 +36,8 @@ export default function Contact({ service, onServiceChange, onOpenLegal }) {
   }
 
   const details = [
-    { Icon: Mail, label: info.email, links: [{ value: site.email, href: `mailto:${site.email}` }] },
-    { Icon: Phone, label: info.phone, links: site.phones.map((phone) => ({ value: phone, href: telHref(phone) })) },
+    { Icon: Mail, label: info.email, value: site.email, href: `mailto:${site.email}` },
+    { Icon: Phone, label: info.phone, value: <PhoneLinks className="contact-detail__value" /> },
     { Icon: MapPin, label: info.area, value: info.areaValue },
     { Icon: Clock, label: info.hours, value: info.hoursValue },
   ]
@@ -52,19 +53,17 @@ export default function Contact({ service, onServiceChange, onOpenLegal }) {
           <p className="section-intro">{contact.intro}</p>
 
           <ul className="contact__details">
-            {details.map(({ Icon, label, value, links }) => (
+            {details.map(({ Icon, label, value, href }) => (
               <li key={label} className="contact-detail">
                 <span className="icon-box" aria-hidden="true">
                   <Icon size={20} strokeWidth={1.5} />
                 </span>
                 <span>
                   <span className="contact-detail__label">{label}</span>
-                  {links ? (
-                    links.map((link) => (
-                      <a key={link.href} href={link.href} className="contact-detail__value">
-                        {link.value}
-                      </a>
-                    ))
+                  {href ? (
+                    <a href={href} className="contact-detail__value">
+                      {value}
+                    </a>
                   ) : (
                     <span className="contact-detail__value">{value}</span>
                   )}

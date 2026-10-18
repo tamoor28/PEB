@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import useActiveSection from '../hooks/useActiveSection.js'
-import { site, telHref } from '../data/site.js'
+import { site } from '../data/site.js'
+import PhoneLinks from './PhoneLinks.jsx'
 import Logo from './Logo.jsx'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
 
@@ -96,11 +97,9 @@ export default function Header() {
             </a>
             <p className="header__mobile-contact">
               <a href={`mailto:${site.email}`}>{site.email}</a>
-              {site.phones.map((phone) => (
-                <a key={phone} href={telHref(phone)}>
-                  {phone}
-                </a>
-              ))}
+              <span>
+                <PhoneLinks />
+              </span>
             </p>
           </div>
         </nav>

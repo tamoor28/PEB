@@ -105,6 +105,11 @@ a {
   text-decoration: none;
 }
 
+/* Un número de teléfono nunca se parte en dos líneas */
+a[href^='tel:'] {
+  white-space: nowrap;
+}
+
 button,
 input,
 select,
@@ -1431,10 +1436,7 @@ abbr[title] {
   color: var(--muted);
 }
 
-/* Bloque para que varios valores (p. ej. dos teléfonos) queden uno debajo de otro */
 .contact-detail__value {
-  display: block;
-  width: fit-content;
   font-weight: 600;
   color: var(--ink);
   overflow-wrap: anywhere;

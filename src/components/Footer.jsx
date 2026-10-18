@@ -1,6 +1,7 @@
 import { ArrowUp, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
-import { site, telHref } from '../data/site.js'
+import { site } from '../data/site.js'
+import PhoneLinks from './PhoneLinks.jsx'
 import Logo from './Logo.jsx'
 import { CatalanFlag } from './Flags.jsx'
 
@@ -74,12 +75,12 @@ export default function Footer({ onOpenLegal }) {
               <Mail size={16} aria-hidden="true" />
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </span>
-            {site.phones.map((phone) => (
-              <span key={phone}>
-                <Phone size={16} aria-hidden="true" />
-                <a href={telHref(phone)}>{phone}</a>
+            <span>
+              <Phone size={16} aria-hidden="true" />
+              <span>
+                <PhoneLinks />
               </span>
-            ))}
+            </span>
             <span>
               <MapPin size={16} aria-hidden="true" />
               {t.contact.info.areaValue}
