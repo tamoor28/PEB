@@ -71,29 +71,37 @@ export const translations = {
       {
         id: 'legalizacion',
         title: 'Legalización',
-        short: 'Licencias de actividad y apertura, declaraciones responsables y legalización de instalaciones.',
+        short: 'Baja tensión, licencias de actividad y obra menor. También aperturas, declaraciones responsables e instalaciones.',
         intro:
           'Te acompañamos en todo el proceso administrativo para que tu actividad, local o instalación cumpla la normativa y pueda funcionar con todas las garantías.',
         items: [
           {
-            id: 'instalaciones',
-            title: 'Legalización de instalaciones',
-            text: 'Regularizamos instalaciones eléctricas, térmicas y de protección contra incendios: memoria o proyecto técnico, certificados y registro ante el organismo competente.',
+            id: 'baja-tension',
+            featured: true,
+            title: 'Baja tensión',
+            text: 'Legalizamos instalaciones eléctricas de baja tensión: memoria técnica de diseño o proyecto según el REBT, certificado de instalación y registro ante la Generalitat.',
           },
           {
             id: 'actividad',
+            featured: true,
             title: 'Licencia de actividad',
             text: 'Redactamos el proyecto de actividad y lo tramitamos según el régimen (licencia, comunicación o declaración) que corresponda a tu negocio.',
+          },
+          {
+            id: 'obra-menor',
+            featured: true,
+            title: 'Obra menor',
+            text: 'Tramitamos la comunicación o licencia de obra menor ante el ayuntamiento para reformas y adecuaciones de locales y viviendas.',
+          },
+          {
+            id: 'instalaciones',
+            title: 'Legalización de instalaciones',
+            text: 'Regularizamos instalaciones térmicas y de protección contra incendios: memoria o proyecto técnico, certificados y registro ante el organismo competente.',
           },
           {
             id: 'apertura',
             title: 'Licencia de apertura',
             text: 'Gestionamos la documentación necesaria para abrir tu local: comercios, restauración, oficinas, talleres, almacenes y mucho más.',
-          },
-          {
-            id: 'comunicacion-obra',
-            title: 'Comunicación de obra',
-            text: 'Preparamos y presentamos la comunicación de obras ante el ayuntamiento para reformas y adecuaciones de locales y viviendas.',
           },
           {
             id: 'declaracion',
@@ -186,6 +194,7 @@ export const translations = {
       },
     ],
     sectionCta: 'Solicitar presupuesto',
+    featuredTag: 'Especialidad',
     process: {
       eyebrow: 'Cómo trabajamos',
       title: 'Un proceso claro, de principio a fin',
@@ -343,29 +352,37 @@ export const translations = {
       {
         id: 'legalizacion',
         title: 'Legalització',
-        short: "Llicències d'activitat i d'obertura, declaracions responsables i legalització d'instal·lacions.",
+        short: "Baixa tensió, llicències d'activitat i obra menor. També obertures, declaracions responsables i instal·lacions.",
         intro:
           "T'acompanyem en tot el procés administratiu perquè la teva activitat, local o instal·lació compleixi la normativa i pugui funcionar amb totes les garanties.",
         items: [
           {
-            id: 'instalaciones',
-            title: "Legalització d'instal·lacions",
-            text: "Regularitzem instal·lacions elèctriques, tèrmiques i de protecció contra incendis: memòria o projecte tècnic, certificats i registre davant l'organisme competent.",
+            id: 'baja-tension',
+            featured: true,
+            title: 'Baixa tensió',
+            text: "Legalitzem instal·lacions elèctriques de baixa tensió: memòria tècnica de disseny o projecte segons el REBT, certificat d'instal·lació i registre davant la Generalitat.",
           },
           {
             id: 'actividad',
+            featured: true,
             title: "Llicència d'activitat",
             text: "Redactem el projecte d'activitat i el tramitem segons el règim (llicència, comunicació o declaració) que correspongui al teu negoci.",
+          },
+          {
+            id: 'obra-menor',
+            featured: true,
+            title: 'Obra menor',
+            text: "Tramitem la comunicació o llicència d'obra menor davant l'ajuntament per a reformes i adequacions de locals i habitatges.",
+          },
+          {
+            id: 'instalaciones',
+            title: "Legalització d'instal·lacions",
+            text: "Regularitzem instal·lacions tèrmiques i de protecció contra incendis: memòria o projecte tècnic, certificats i registre davant l'organisme competent.",
           },
           {
             id: 'apertura',
             title: "Llicència d'obertura",
             text: 'Gestionem la documentació necessària per obrir el teu local: comerços, restauració, oficines, tallers, magatzems i molt més.',
-          },
-          {
-            id: 'comunicacion-obra',
-            title: "Comunicació d'obra",
-            text: "Preparem i presentem la comunicació d'obres davant l'ajuntament per a reformes i adequacions de locals i habitatges.",
           },
           {
             id: 'declaracion',
@@ -457,6 +474,7 @@ export const translations = {
       },
     ],
     sectionCta: 'Sol·licita pressupost',
+    featuredTag: 'Especialitat',
     process: {
       eyebrow: 'Com treballem',
       title: 'Un procés clar, de principi a fi',

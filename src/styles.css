@@ -1171,8 +1171,8 @@ abbr[title] {
   display: flex;
 }
 
-/* Con un número impar de servicios, el último ocupa toda la fila */
-.service-grid > li:last-child:nth-child(odd) {
+/* Con un número impar de servicios (sin contar los destacados), el último ocupa toda la fila */
+.service-grid > li:last-child:nth-child(odd of :not(.is-featured)) {
   grid-column: 1 / -1;
 }
 
@@ -1197,6 +1197,57 @@ abbr[title] {
   color: var(--muted);
 }
 
+/* Servicios destacados («Especialidad»): ocupan toda la fila, fondo negro y acento naranja fijo */
+.service-grid > li.is-featured {
+  grid-column: 1 / -1;
+}
+
+.service-card--featured {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 1.4rem;
+  align-items: start;
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+.service-card--featured::before {
+  transform: scaleX(1);
+}
+
+.service-card--featured .icon-box {
+  grid-row: 1 / span 3;
+  width: 52px;
+  height: 52px;
+  border-color: var(--line-dark);
+  color: var(--accent-light);
+}
+
+.service-card--featured:hover .icon-box {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.service-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+}
+
+.service-card--featured .service-card__title {
+  margin-top: 0.35rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.service-card--featured .service-card__text {
+  color: var(--muted-dark);
+}
+
 @media (max-width: 900px) {
   .service-section__inner {
     grid-template-columns: 1fr;
@@ -1216,6 +1267,15 @@ abbr[title] {
 
   .service-card {
     padding: 1.35rem;
+  }
+
+  /* En móvil el destacado apila el icono encima, como las demás tarjetas */
+  .service-card--featured {
+    display: block;
+  }
+
+  .service-card__tag {
+    margin-top: 1.15rem;
   }
 
   .service-section__aside .btn {
