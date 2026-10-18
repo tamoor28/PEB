@@ -357,7 +357,7 @@ abbr[title] {
 .logo {
   --logo-bg: var(--ink);
   --logo-fg: #fff;
-  --logo-shadow: #f47b20;
+  --logo-accent: #e8501f;
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
@@ -1660,6 +1660,7 @@ a.contact-detail__value:hover {
 .footer .logo {
   --logo-bg: #fff;
   --logo-fg: var(--ink);
+  --logo-accent: var(--accent);
 }
 
 .footer .logo__tagline {

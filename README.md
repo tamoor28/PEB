@@ -106,13 +106,13 @@ PEB/
 
 ## Logo
 
-El logo de PEB son las letras **P**, **E** y **B** en una línea dentro de un bloque negro, cada una en su módulo y separadas por líneas finas, como una retícula de plano. Las letras son de **Archivo** gruesa y ancha (la misma letra del «PEB» original) con una **sombra naranja** desplazada, y están convertidas a trazados vectoriales, así que el logo se ve igual en cualquier sitio aunque no esté instalada la fuente.
+El logo de PEB son las letras **P**, **E** y **β** en una línea dentro de un bloque negro, cada una en su módulo y separadas por **líneas finas naranjas**, como una retícula de plano. Las letras son de **trazo fino y constante**, dibujadas a mano como trazados vectoriales (no dependen de ninguna fuente). La **B se dibuja como la beta griega (β)**, con la esquina superior redondeada y el palo que baja por debajo de la línea, y va en **naranja**.
 
 | Archivo | Uso |
 | --- | --- |
-| `public/logo.svg` | Logo horizontal en vectorial (bloque negro, letras blancas con sombra naranja). Para la web, tarjetas, presupuestos o firmas de correo |
+| `public/logo.svg` | Logo horizontal en vectorial (bloque negro, P y E blancas, β y líneas de módulo en naranja). Para la web, tarjetas, presupuestos o firmas de correo |
 | `public/favicon.svg` | Versión cuadrada y compacta. Icono de la pestaña y foto de perfil en LinkedIn, WhatsApp Business o el Perfil de Empresa de Google |
-| `src/components/Logo.jsx` | Versión usada en la web: logo y nombre completo en la cabecera; en el pie de página (fondo negro) se invierte a bloque blanco con letras negras |
+| `src/components/Logo.jsx` | Versión usada en la web: logo y nombre completo en la cabecera; en el pie de página (fondo negro) se invierte a bloque blanco con letras negras. Los colores se cambian con `--logo-bg`, `--logo-fg` y `--logo-accent` en `src/styles.css` |
 
 Si alguna plataforma pide PNG, se puede exportar el SVG desde cualquier editor de imágenes o abriéndolo en el navegador.
 
