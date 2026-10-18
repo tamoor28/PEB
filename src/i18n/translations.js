@@ -50,7 +50,7 @@ export const translations = {
       titleEnd: ' en Barcelona',
       subtitle:
         'Somos PEB, un equipo de ingenieros mecánicos que redacta proyectos técnicos, tramita licencias de actividad y legaliza instalaciones de baja tensión, climatización, ventilación, fontanería y protección contra incendios. Nos ocupamos del papeleo para que tú te centres en tu negocio.',
-      ctaPrimary: 'Solicita presupuesto',
+      ctaPrimary: 'Contacta con nosotros',
       ctaSecondary: 'Ver servicios',
       highlights: [
         'Trato directo con ingenieros',
@@ -322,7 +322,7 @@ export const translations = {
       titleEnd: ' a Barcelona',
       subtitle:
         "Som PEB, un equip d'enginyers mecànics que redacta projectes tècnics, tramita llicències d'activitat i legalitza instal·lacions de baixa tensió, climatització, ventilació, lampisteria i protecció contra incendis. Ens encarreguem de la paperassa perquè tu et puguis centrar en el teu negoci.",
-      ctaPrimary: 'Demana pressupost',
+      ctaPrimary: 'Contacta amb nosaltres',
       ctaSecondary: 'Consulta els serveis',
       highlights: [
         'Tracte directe amb enginyers',
