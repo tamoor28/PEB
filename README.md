@@ -106,16 +106,16 @@ PEB/
 
 ## Logo
 
-El logo de PEB son las letras **P**, **ε** y **B** en una línea dentro de un bloque negro, cada una en su módulo y separadas por **líneas finas naranjas**, como una retícula de plano, y debajo, en pequeño, la palabra **ENGINYERIA**. Las letras son de **trazo fino y constante**, dibujadas a mano como trazados vectoriales (no dependen de ninguna fuente). La **E se dibuja como la épsilon griega (ε)** y va en **naranja**; la P, la B y ENGINYERIA son blancas.
+El logo de PEB son las letras **P**, **ε** y **B** en una línea dentro de un bloque negro, cada una en su módulo y separadas por **líneas finas naranjas**, como una retícula de plano. Es el **logo Zain**. Las letras son de **trazo fino y constante**, dibujadas a mano como trazados vectoriales (no dependen de ninguna fuente). La **E se dibuja como la épsilon griega (ε)** y va en **naranja**; la P y la B son blancas.
 
-Versiones anteriores guardadas con sus medidas exactas:
+Versiones guardadas con sus medidas exactas, para poder recuperarlas idénticas:
 
 - **Logo Tamoor** (P · E · β con la β en naranja): `brand/logo-tamoor/`.
-- **Logo Zain** (P · ε · B con la ε en naranja, sin ENGINYERIA): `brand/logo-zain/`.
+- **Logo Zain** (el logo actual): `brand/logo-zain/`.
 
 | Archivo | Uso |
 | --- | --- |
-| `public/logo.svg` | Logo en vectorial con ENGINYERIA debajo (bloque negro, letras blancas, ε y líneas de módulo en naranja). Para la web, tarjetas, presupuestos o firmas de correo |
+| `public/logo.svg` | Logo horizontal en vectorial (bloque negro, P y B blancas, ε y líneas de módulo en naranja). Para la web, tarjetas, presupuestos o firmas de correo |
 | `public/favicon.svg` | Versión cuadrada y compacta. Icono de la pestaña y foto de perfil en LinkedIn, WhatsApp Business o el Perfil de Empresa de Google |
 | `src/components/Logo.jsx` | Versión usada en la web: logo y nombre completo en la cabecera; en el pie de página (fondo negro) se invierte a bloque blanco con letras negras. Los colores se cambian con `--logo-bg`, `--logo-fg` y `--logo-accent` en `src/styles.css` |
 
