@@ -31,7 +31,6 @@ export default function App() {
             key={category.id}
             category={category}
             index={index}
-            total={t.categories.length}
             onRequestQuote={setService}
           />
         ))}

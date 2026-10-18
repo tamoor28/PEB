@@ -2,10 +2,9 @@ import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { categoryIcons, serviceIcons } from '../data/icons.js'
 
-export default function ServiceSection({ category, index, total, onRequestQuote }) {
+export default function ServiceSection({ category, index, onRequestQuote }) {
   const { t } = useLanguage()
   const CategoryIcon = categoryIcons[category.id]
-  const pad = (n) => String(n).padStart(2, '0')
   const titleId = `${category.id}-title`
 
   return (
@@ -16,13 +15,11 @@ export default function ServiceSection({ category, index, total, onRequestQuote 
     >
       <div className="container service-section__inner">
         <div className="service-section__aside" data-reveal>
-          <p className="service-section__number">
-            <span className="icon-box" aria-hidden="true">
+          <div className="service-section__icon" aria-hidden="true">
+            <span className="icon-box">
               <CategoryIcon size={20} strokeWidth={1.5} />
             </span>
-            {pad(index + 1)}
-            <span className="service-section__total">/ {pad(total)}</span>
-          </p>
+          </div>
           <h2 id={titleId} className="section-title">
             {category.title}
           </h2>
