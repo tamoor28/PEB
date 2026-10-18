@@ -106,15 +106,20 @@ PEB/
 
 ## Logo
 
-El logo de PEB son las letras **P**, **ε** y **B** en una línea dentro de un bloque negro, cada una en su módulo y separadas por **líneas finas naranjas**, como una retícula de plano. Las letras son de **trazo fino y constante**, dibujadas a mano como trazados vectoriales (no dependen de ninguna fuente). La **E se dibuja como la épsilon griega (ε)** y va en **naranja**; la P y la B son blancas.
+El logo de PEB son las letras **P**, **ε** y **B** en una línea dentro de un bloque negro, cada una en su módulo y separadas por **líneas finas naranjas**, como una retícula de plano, y un cuarto módulo con la palabra **ENGINYERIA**. Las letras son de **trazo fino y constante**, dibujadas a mano como trazados vectoriales (no dependen de ninguna fuente). La **E se dibuja como la épsilon griega (ε)** y va en **naranja**; la P, la B y ENGINYERIA son blancas.
 
-La versión anterior, el **logo Tamoor** (P · E · β con la β en naranja), está guardada con sus medidas exactas en `brand/logo-tamoor/`.
+En pantallas estrechas (menos de 480 px, y de 1121 a 1199 px junto al menú) la web usa la versión corta, sin ENGINYERIA.
+
+Versiones anteriores guardadas con sus medidas exactas:
+
+- **Logo Tamoor** (P · E · β con la β en naranja): `brand/logo-tamoor/`.
+- **Logo Zain** (P · ε · B con la ε en naranja, sin ENGINYERIA): `brand/logo-zain/`.
 
 | Archivo | Uso |
 | --- | --- |
-| `public/logo.svg` | Logo horizontal en vectorial (bloque negro, P y B blancas, ε y líneas de módulo en naranja). Para la web, tarjetas, presupuestos o firmas de correo |
+| `public/logo.svg` | Logo horizontal en vectorial con ENGINYERIA (bloque negro, letras blancas, ε y líneas de módulo en naranja). Para la web, tarjetas, presupuestos o firmas de correo |
 | `public/favicon.svg` | Versión cuadrada y compacta. Icono de la pestaña y foto de perfil en LinkedIn, WhatsApp Business o el Perfil de Empresa de Google |
-| `src/components/Logo.jsx` | Versión usada en la web: logo y nombre completo en la cabecera; en el pie de página (fondo negro) se invierte a bloque blanco con letras negras. Los colores se cambian con `--logo-bg`, `--logo-fg` y `--logo-accent` en `src/styles.css` |
+| `src/components/Logo.jsx` | Versión usada en la web, con la versión completa y la corta. En el pie de página (fondo negro) se invierte a bloque blanco con letras negras y el nombre completo va debajo. Los colores se cambian con `--logo-bg`, `--logo-fg` y `--logo-accent` en `src/styles.css` |
 
 Si alguna plataforma pide PNG, se puede exportar el SVG desde cualquier editor de imágenes o abriéndolo en el navegador.
 
