@@ -34,12 +34,11 @@ export default function ServiceSection({ category, index, onRequestQuote }) {
           {category.items.map((item, itemIndex) => {
             const Icon = serviceIcons[item.id]
             return (
-              <li key={item.id} className={item.featured ? 'is-featured' : undefined} data-reveal style={{ '--i': itemIndex }}>
-                <article className={`service-card${item.featured ? ' service-card--featured' : ''}`}>
+              <li key={item.id} data-reveal style={{ '--i': itemIndex }}>
+                <article className="service-card">
                   <span className="icon-box" aria-hidden="true">
                     <Icon size={22} strokeWidth={1.5} />
                   </span>
-                  {item.featured && <p className="service-card__tag">{t.featuredTag}</p>}
                   <h3 className="service-card__title">{item.title}</h3>
                   <p className="service-card__text">{item.text}</p>
                 </article>

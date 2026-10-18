@@ -27,7 +27,7 @@ La web presenta los servicios de la empresa, está pensada para aparecer en las 
 | --- | --- | --- |
 | Portada | `#inicio` | Presentación de PEB, llamadas a la acción y normativa de referencia (CTE, RITE, REBT, RIPCI) |
 | Servicios | `#servicios` | Resumen de las cuatro áreas de trabajo en tarjetas |
-| **01 · Legalización** | `#legalizacion` | Destacados como especialidad: baja tensión, licencia de actividad y obra menor. Además: legalización de instalaciones térmicas y contra incendios, licencia de apertura y declaración responsable |
+| **01 · Legalización** | `#legalizacion` | Legalización de instalaciones, licencia de actividad, licencia de apertura, comunicación de obra y declaración responsable |
 | **02 · Proyectos básicos y de ejecución** | `#proyectos` | Fontanería y saneamiento, climatización y calefacción, ventilación, electricidad, protección contra incendios y energías renovables |
 | **03 · Dirección y gestión** | `#direccion` | Dirección facultativa de obra, mediciones y presupuestos |
 | **04 · Gestión energética** | `#gestion-energetica` | Proyecto de eficiencia energética, proyectos de sostenibilidad energética y certificación de eficiencia energética |
@@ -127,7 +127,7 @@ Si alguna plataforma pide PNG, se puede exportar el SVG desde cualquier editor d
 | --- | --- |
 | Email, teléfono, dominio, datos legales, LinkedIn | `src/data/site.js` |
 | Cualquier texto (en los dos idiomas) | `src/i18n/translations.js` |
-| Añadir o quitar un servicio | `src/i18n/translations.js` (en `es` y en `ca`) y su icono en `src/data/icons.js`. Con `featured: true` el servicio sale destacado como «Especialidad» |
+| Añadir o quitar un servicio | `src/i18n/translations.js` (en `es` y en `ca`) y su icono en `src/data/icons.js` |
 | Colores, tipografías y velocidad de las animaciones | Variables al principio de `src/styles.css` (`--accent`, `--ink`, `--ease`…) |
 | Título y descripción para Google | `index.html`, `ca/index.html` y `meta` en `translations.js` |
 
