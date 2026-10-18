@@ -71,7 +71,7 @@ export const translations = {
       {
         id: 'legalizacion',
         title: 'Legalización',
-        short: 'Licencias de actividad y apertura, declaraciones responsables y legalización de instalaciones.',
+        short: 'Licencias de actividad, baja tensión, obra menor y otras legalizaciones.',
         intro:
           'Te acompañamos en todo el proceso administrativo para que tu actividad, local o instalación cumpla la normativa y pueda funcionar con todas las garantías.',
         items: [
@@ -343,7 +343,7 @@ export const translations = {
       {
         id: 'legalizacion',
         title: 'Legalització',
-        short: "Llicències d'activitat i d'obertura, declaracions responsables i legalització d'instal·lacions.",
+        short: "Llicències d'activitat, baixa tensió, obra menor i altres legalitzacions.",
         intro:
           "T'acompanyem en tot el procés administratiu perquè la teva activitat, local o instal·lació compleixi la normativa i pugui funcionar amb totes les garanties.",
         items: [
