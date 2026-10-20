@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tamoor28.github.io/PEB/sitemap.xml
