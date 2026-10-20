@@ -7,6 +7,8 @@ export const site = {
   url: 'https://pebenginyeria.com',
   email: 'peb.enginyeria@outlook.com',
   phones: ['+34 612 441 354', '+34 632 37 99 24'],
+  // Clave de acceso de Web3Forms (es pública): el formulario de contacto envía los mensajes a `email`.
+  formAccessKey: '',
   city: 'Barcelona',
   // Datos para el aviso legal y la política de privacidad
   holder: '[Nombre y apellidos o razón social]',
