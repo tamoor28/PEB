@@ -135,9 +135,9 @@ Si alguna plataforma pide PNG, se puede exportar el SVG desde cualquier editor d
 
 ## Antes de publicar
 
-La web está publicada en **https://tamoor28.github.io/PEB/** (castellano) y **https://tamoor28.github.io/PEB/ca/** (catalán). Quedan algunos **datos de ejemplo** por sustituir:
+La web está publicada en **https://pebenginyeria.com** (castellano) y **https://pebenginyeria.com/ca/** (catalán). Quedan algunos **datos de ejemplo** por sustituir:
 
-- [x] Email, los dos teléfonos y la dirección oficial de la web (GitHub Pages).
+- [x] Email, los dos teléfonos y el dominio `pebenginyeria.com`.
 - [ ] `src/data/site.js`: titular, NIF y dirección para los textos legales. Si tenéis LinkedIn, añadid la URL.
 - [ ] `src/i18n/translations.js`: revisar el horario de atención y, si queréis, añadir vuestros nombres en la sección «Nosotros».
 - [ ] Revisar los textos legales con un asesor; son una plantilla básica.
@@ -150,8 +150,9 @@ La carpeta `dist/` que genera `npm run build` es una web estática: se puede alo
 
 1. En GitHub, **Settings → Pages → Build and deployment → Source: GitHub Actions** (solo hay que hacerlo una vez). En un repositorio privado, GitHub Pages necesita una cuenta GitHub Pro; con la cuenta gratuita, el repositorio tiene que ser público.
 2. Cada vez que se suben cambios a la rama `main`, el flujo `.github/workflows/deploy.yml` compila y publica la web automáticamente en un par de minutos (se ve en la pestaña **Actions**).
-3. La dirección oficial de la web es `https://tamoor28.github.io/PEB/`. Está escrita en `src/data/site.js` (`url`), `index.html`, `ca/index.html`, `public/robots.txt` y `public/sitemap.xml`.
-4. Con dominio propio: configúralo en **Settings → Pages → Custom domain**, crea la variable de repositorio `BASE_PATH` con el valor `/` (**Settings → Secrets and variables → Actions → Variables**) y sustituye la dirección oficial en los archivos del punto 3.
+3. La web usa el dominio propio **`pebenginyeria.com`**, comprado en Cloudflare y configurado en **Settings → Pages → Custom domain**. En Cloudflare, los registros DNS son: cuatro registros `A` para `@` (185.199.108.153, 185.199.109.153, 185.199.110.153 y 185.199.111.153) y un `CNAME` `www` → `tamoor28.github.io`, todos en modo **«DNS only»** (nube gris) para que GitHub pueda emitir el certificado HTTPS.
+4. La dirección oficial `https://pebenginyeria.com` está escrita en `src/data/site.js` (`url`), `index.html`, `ca/index.html`, `public/robots.txt` y `public/sitemap.xml`. Si cambia el dominio, hay que sustituirla en esos archivos.
+5. La web se compila para la raíz del dominio (`/`). Para volver a publicarla sin dominio propio en `https://<usuario>.github.io/PEB/`, crea la variable de repositorio `BASE_PATH` con el valor `/PEB/` (**Settings → Secrets and variables → Actions → Variables**).
 
 ### Opción B · Netlify o Vercel
 
@@ -174,7 +175,7 @@ En Netlify no hace falta escribirla: el archivo `netlify.toml` ya la lleva (y fi
 
 **Pasos recomendados después de publicar:**
 
-1. **Google Search Console:** añadid la propiedad de tipo «Prefijo de URL» `https://tamoor28.github.io/PEB/`, verificadla con la etiqueta HTML que da Google (se pega en el `<head>` de `index.html`) y enviad el sitemap `https://tamoor28.github.io/PEB/sitemap.xml`.
+1. **Google Search Console:** añadid la propiedad de tipo «Dominio» `pebenginyeria.com` (se verifica con un registro `TXT` en Cloudflare) y enviad el sitemap `https://pebenginyeria.com/sitemap.xml`.
 2. **Perfil de Empresa de Google (Google Business Profile):** es lo que más ayuda a aparecer en búsquedas locales y en Google Maps («ingeniero licencia de actividad Barcelona»). Usad la misma dirección, teléfono y web que en la página.
 3. **Reseñas:** pedid a los primeros clientes que dejen una reseña en Google.
 4. **Directorios y colegios profesionales:** enlaces desde el colegio de ingenieros, directorios de empresas y LinkedIn.

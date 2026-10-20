@@ -28,9 +28,9 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          # Sin dominio propio la web vive en /<nombre-del-repo>/.
-          # Con dominio propio, crea la variable de repositorio BASE_PATH con el valor "/".
-          BASE_PATH: ${{ vars.BASE_PATH || format('/{0}/', github.event.repository.name) }}
+          # La web se sirve en la raíz de su dominio propio (pebenginyeria.com).
+          # Sin dominio propio viviría en /<nombre-del-repo>/: crea la variable de repositorio BASE_PATH con ese valor.
+          BASE_PATH: ${{ vars.BASE_PATH || '/' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
