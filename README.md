@@ -44,7 +44,7 @@ La web presenta los servicios de la empresa, está pensada para aparecer en las 
 - **Transiciones suaves:** los bloques aparecen con un fundido al hacer scroll, el cambio de idioma es un fundido, el menú móvil se despliega con animación y la cabecera se oculta al bajar y reaparece al subir. Si el sistema tiene activado «reducir movimiento», las animaciones se desactivan.
 - **Adaptada a móvil, tablet y ordenador** (revisada de 320 px a 1440 px), con menú a pantalla completa en el móvil y campos de formulario que no hacen zoom en iPhone.
 - **Accesible:** HTML semántico, enlace para saltar al contenido, navegación con teclado y textos alternativos.
-- **Formulario de contacto sin servidor:** prepara el correo con los datos del cliente y abre su aplicación de email. El botón «Solicitar presupuesto» de cada sección deja el servicio ya seleccionado.
+- **Formulario de contacto que envía el mensaje de verdad:** a través de [Web3Forms](https://web3forms.com) (gratis hasta 250 mensajes al mes), cada consulta llega a `peb.enginyeria@outlook.com` con el nombre, el correo, el teléfono, el servicio y el mensaje; al pulsar «Responder» en el correo, la respuesta va directamente al cliente. Al enviarse, el formulario se vacía y muestra un aviso de confirmación (o de error). El botón «Contacta con nosotros» de cada sección deja el servicio ya seleccionado.
 - **Sin cookies:** las tipografías se sirven desde la propia web (no se usa Google Fonts) y solo se guarda el idioma en el navegador. No hace falta banner de cookies.
 - **Textos legales** (aviso legal, privacidad y cookies) en ventanas emergentes, en los dos idiomas.
 
@@ -126,6 +126,7 @@ Si alguna plataforma pide PNG, se puede exportar el SVG desde cualquier editor d
 | Quiero cambiar… | Archivo |
 | --- | --- |
 | Email, teléfonos, dominio, datos legales, LinkedIn | `src/data/site.js` |
+| Clave del formulario de contacto (Web3Forms) | `formAccessKey` en `src/data/site.js`. Se obtiene gratis en https://web3forms.com con el correo que recibirá los mensajes |
 | Cualquier texto (en los dos idiomas) | `src/i18n/translations.js` |
 | Añadir o quitar un servicio | `src/i18n/translations.js` (en `es` y en `ca`) y su icono en `src/data/icons.js` |
 | Colores, tipografías y velocidad de las animaciones | Variables al principio de `src/styles.css` (`--accent`, `--ink`, `--ease`…) |

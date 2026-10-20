@@ -1574,6 +1574,15 @@ a.contact-detail__value:hover {
   color: var(--muted);
 }
 
+.contact-form__hint.is-error {
+  color: var(--accent-ink);
+}
+
+.contact-form button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
 @media (max-width: 960px) {
   .contact__inner {
     grid-template-columns: 1fr;

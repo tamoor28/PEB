@@ -5,34 +5,50 @@ import { site } from '../data/site.js'
 import PhoneLinks from './PhoneLinks.jsx'
 
 const OTHER = 'otro'
+// Web3Forms reenvía cada mensaje del formulario al correo de la empresa (site.email).
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit'
 
 export default function Contact({ service, onServiceChange, onOpenLegal }) {
   const { t } = useLanguage()
   const { contact, categories } = t
   const { form, info } = contact
-  const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
-  // Sin servidor: el formulario prepara el correo y abre la aplicación de email del visitante.
-  const handleSubmit = (event) => {
+  // El mensaje se envía a peb.enginyeria@outlook.com; al responder desde el correo, la respuesta va al cliente.
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    const data = new FormData(event.currentTarget)
+    const formElement = event.currentTarget
+    const data = new FormData(formElement)
     const serviceLabel =
       categories.find((category) => category.id === service)?.title ?? (service === OTHER ? form.other : site.name)
     const labels = form.bodyLabels
-    const body = [
-      `${labels.name}: ${data.get('name')}`,
-      `${labels.email}: ${data.get('email')}`,
-      data.get('phone') ? `${labels.phone}: ${data.get('phone')}` : null,
-      `${labels.service}: ${serviceLabel}`,
-      '',
-      data.get('message'),
-    ]
-      .filter((line) => line !== null)
-      .join('\n')
 
-    const mailto = `mailto:${site.email}?subject=${encodeURIComponent(form.subject(serviceLabel))}&body=${encodeURIComponent(body)}`
-    window.location.href = mailto
-    setSent(true)
+    setStatus('sending')
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: site.formAccessKey,
+          subject: form.subject(serviceLabel),
+          from_name: site.legalName,
+          replyto: data.get('email'),
+          botcheck: Boolean(data.get('botcheck')),
+          [labels.name]: data.get('name'),
+          [labels.email]: data.get('email'),
+          [labels.phone]: data.get('phone') || '—',
+          [labels.service]: serviceLabel,
+          [labels.message]: data.get('message'),
+        }),
+      })
+      const result = await response.json()
+      if (!response.ok || !result.success) throw new Error(result.message)
+      formElement.reset()
+      onServiceChange('')
+      setStatus('sent')
+    } catch {
+      setStatus('error')
+    }
   }
 
   const details = [
@@ -109,6 +125,9 @@ export default function Contact({ service, onServiceChange, onOpenLegal }) {
             <textarea name="message" rows={5} placeholder={form.messagePlaceholder} required />
           </label>
 
+          {/* Campo trampa para bots: las personas no lo ven ni lo marcan */}
+          <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
+
           <label className="checkbox">
             <input type="checkbox" name="privacy" required />
             <span>
@@ -121,12 +140,12 @@ export default function Contact({ service, onServiceChange, onOpenLegal }) {
           </label>
 
           <div className="contact-form__footer">
-            <button type="submit" className="btn btn--dark btn--lg">
-              {form.submit}
+            <button type="submit" className="btn btn--dark btn--lg" disabled={status === 'sending'}>
+              {status === 'sending' ? form.sending : form.submit}
               <ArrowRight size={18} aria-hidden="true" />
             </button>
-            <p className="contact-form__hint" role="status">
-              {sent ? form.success(site.email) : form.hint}
+            <p className={`contact-form__hint${status === 'error' ? ' is-error' : ''}`} role="status">
+              {status === 'sent' ? form.success : status === 'error' ? form.error(site.email) : form.hint}
             </p>
           </div>
         </form>
