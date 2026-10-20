@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tudominio.com/sitemap.xml
+Sitemap: https://tamoor28.github.io/PEB/sitemap.xml
