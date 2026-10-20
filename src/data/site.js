@@ -4,7 +4,7 @@
 export const site = {
   name: 'PEB',
   legalName: "PEB · Projectes d'Enginyeria de Barcelona",
-  url: 'https://tamoor28.github.io/PEB',
+  url: 'https://pebenginyeria.com',
   email: 'peb.enginyeria@outlook.com',
   phones: ['+34 612 441 354', '+34 632 37 99 24'],
   city: 'Barcelona',
