@@ -5,7 +5,7 @@ export const site = {
   name: 'PEB',
   legalName: "PEB · Projectes d'Enginyeria de Barcelona",
   url: 'https://pebenginyeria.com',
-  email: 'info@pebenginyeria.com',
+  email: 'peb@pebenginyeria.com',
   phones: ['+34 612 441 354', '+34 632 37 99 24'],
   // Clave de acceso de Web3Forms (es pública). Web3Forms entrega los mensajes del formulario al correo con el
   // que se creó la clave (peb.enginyeria@outlook.com), no a `email`.
