@@ -16,6 +16,7 @@ La web presenta los servicios de la empresa, está pensada para aparecer en las 
 - [Cómo modificar la web](#cómo-modificar-la-web)
 - [Logo](#logo)
 - [Antes de publicar](#antes-de-publicar)
+- [Correo info@pebenginyeria.com](#correo-infopebenginyeriacom)
 - [Publicación](#publicación)
 - [Posicionamiento en Google (SEO)](#posicionamiento-en-google-seo)
 
@@ -142,6 +143,16 @@ La web está publicada en **https://pebenginyeria.com** (castellano) y **https:/
 - [ ] `src/data/site.js`: titular, NIF y dirección para los textos legales. Si tenéis LinkedIn, añadid la URL.
 - [ ] `src/i18n/translations.js`: revisar el horario de atención y, si queréis, añadir vuestros nombres en la sección «Nosotros».
 - [ ] Revisar los textos legales con un asesor; son una plantilla básica.
+
+## Correo info@pebenginyeria.com
+
+La web muestra **info@pebenginyeria.com**. El dominio está en Cloudflare, que con **Email Routing** (gratis) recibe el correo de esa dirección y lo reenvía a `peb.enginyeria@outlook.com`:
+
+1. En Cloudflare, entra en el dominio `pebenginyeria.com` → **Email** → **Email Routing** → **Get started**.
+2. Crea la dirección personalizada `info` con destino `peb.enginyeria@outlook.com` y confirma el enlace que llega a ese buzón.
+3. Acepta que Cloudflare añada los registros DNS (MX y SPF) que propone.
+
+Email Routing solo **recibe**: para **enviar** desde info@pebenginyeria.com hace falta un buzón de correo con el dominio (por ejemplo Zoho Mail, Google Workspace o Microsoft 365). Mientras tanto, las respuestas salen desde la cuenta de Outlook. El formulario de contacto no depende de esto: Web3Forms entrega los mensajes en `peb.enginyeria@outlook.com`.
 
 ## Publicación
 

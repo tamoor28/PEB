@@ -5,7 +5,7 @@ import { site } from '../data/site.js'
 import PhoneLinks from './PhoneLinks.jsx'
 
 const OTHER = 'otro'
-// Web3Forms reenvía cada mensaje del formulario al correo de la empresa (site.email).
+// Web3Forms reenvía cada mensaje del formulario al correo con el que se creó la clave (peb.enginyeria@outlook.com).
 const FORM_ENDPOINT = 'https://api.web3forms.com/submit'
 
 export default function Contact({ service, onServiceChange, onOpenLegal }) {
@@ -14,7 +14,7 @@ export default function Contact({ service, onServiceChange, onOpenLegal }) {
   const { form, info } = contact
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
-  // El mensaje se envía a peb.enginyeria@outlook.com; al responder desde el correo, la respuesta va al cliente.
+  // Al responder desde el correo, la respuesta va al cliente (replyto).
   const handleSubmit = async (event) => {
     event.preventDefault()
     const formElement = event.currentTarget
