@@ -1063,13 +1063,6 @@ abbr[title] {
   align-items: flex-start;
 }
 
-.overview-card__number {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--accent-ink);
-}
-
 .overview-card__title {
   margin-top: 1.4rem;
   font-size: 1.25rem;

@@ -27,7 +27,6 @@ export default function ServicesOverview() {
                     <span className="icon-box icon-box--lg" aria-hidden="true">
                       <Icon size={24} strokeWidth={1.5} />
                     </span>
-                    <span className="overview-card__number">{String(index + 1).padStart(2, '0')}</span>
                   </span>
                   <span className="overview-card__title">{category.title}</span>
                   <span className="overview-card__text">{category.short}</span>
