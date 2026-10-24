@@ -590,8 +590,8 @@ abbr[title] {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
-/* El nombre completo solo se oculta cuando no cabe junto al menú o en móviles estrechos */
-@media (min-width: 1121px) and (max-width: 1279px), (max-width: 499px) {
+/* El nombre completo solo se muestra en la cabecera de tablet: junto al menú completo no cabe */
+@media (min-width: 1200px), (max-width: 499px) {
   .header .logo__tagline {
     display: none;
   }
@@ -604,7 +604,7 @@ abbr[title] {
   }
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 1199px) {
   .header__toggle {
     display: inline-block;
   }
@@ -1021,10 +1021,24 @@ abbr[title] {
   background: var(--paper-2);
 }
 
+/* Tres tarjetas por fila; si la última fila queda incompleta, sus tarjetas se reparten el ancho */
 .overview__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1.25rem;
+}
+
+.overview__grid > li {
+  grid-column: span 2;
+}
+
+.overview__grid > li:nth-child(3n + 1):nth-last-child(2),
+.overview__grid > li:nth-child(3n + 1):nth-last-child(2) + li {
+  grid-column: span 3;
+}
+
+.overview__grid > li:nth-child(3n + 1):last-child {
+  grid-column: 1 / -1;
 }
 
 .overview__grid > li {
@@ -1109,6 +1123,18 @@ abbr[title] {
 @media (max-width: 1080px) {
   .overview__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overview__grid > li,
+  .overview__grid > li:nth-child(3n + 1):nth-last-child(2),
+  .overview__grid > li:nth-child(3n + 1):nth-last-child(2) + li,
+  .overview__grid > li:nth-child(3n + 1):last-child {
+    grid-column: auto;
+  }
+
+  /* Con un número impar de tarjetas, la última ocupa toda la fila */
+  .overview__grid > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 }
 
