@@ -54,7 +54,7 @@ export default function Header() {
     document.documentElement.classList.toggle('menu-open', open)
     if (!open) return undefined
     const onKey = (event) => event.key === 'Escape' && setOpen(false)
-    const onResize = () => window.innerWidth > 1199 && setOpen(false)
+    const onResize = () => window.innerWidth > 1299 && setOpen(false)
     window.addEventListener('keydown', onKey)
     window.addEventListener('resize', onResize)
     return () => {

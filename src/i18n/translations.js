@@ -31,7 +31,7 @@ export const translations = {
       ca: 'Català',
     },
     nav: {
-      actividad: 'Actividad',
+      actividad: 'Licencia de actividad',
       legalizacion: 'Legalización',
       proyectos: 'Proyectos',
       direccion: 'Dirección',
@@ -330,7 +330,7 @@ export const translations = {
       ca: 'Català',
     },
     nav: {
-      actividad: 'Activitat',
+      actividad: "Llicència d'activitat",
       legalizacion: 'Legalització',
       proyectos: 'Projectes',
       direccion: 'Direcció',

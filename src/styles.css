@@ -446,6 +446,7 @@ abbr[title] {
 
 .header__link {
   position: relative;
+  white-space: nowrap;
   display: inline-flex;
   align-items: baseline;
   gap: 0.5rem;
@@ -591,7 +592,7 @@ abbr[title] {
 }
 
 /* El nombre completo solo se muestra en la cabecera de tablet: junto al menú completo no cabe */
-@media (min-width: 1200px), (max-width: 499px) {
+@media (min-width: 1300px), (max-width: 499px) {
   .header .logo__tagline {
     display: none;
   }
@@ -604,7 +605,7 @@ abbr[title] {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1299px) {
   .header__toggle {
     display: inline-block;
   }
