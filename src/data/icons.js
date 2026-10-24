@@ -6,15 +6,18 @@ import {
   DraftingCompass,
   Droplets,
   Eye,
+  FileText,
   Flame,
   Gauge,
   Hammer,
+  Landmark,
   Handshake,
   HardHat,
   Leaf,
   MapPin,
   PenLine,
   Ruler,
+  ScanSearch,
   Sprout,
   Stamp,
   Store,
@@ -26,6 +29,7 @@ import {
 
 // Icono de cada área de servicio (por id de categoría).
 export const categoryIcons = {
+  'licencia-actividad': Store,
   legalizacion: Stamp,
   proyectos: DraftingCompass,
   direccion: HardHat,
@@ -35,7 +39,10 @@ export const categoryIcons = {
 // Icono de cada servicio concreto (por id de servicio).
 export const serviceIcons = {
   instalaciones: ClipboardCheck,
-  actividad: Store,
+  'actividad-estudio': ScanSearch,
+  actividad: FileText,
+  'actividad-tramitacion': Landmark,
+  'actividad-certificado': BadgeCheck,
   apertura: DoorOpen,
   'comunicacion-obra': Hammer,
   declaracion: PenLine,

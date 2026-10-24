@@ -27,11 +27,12 @@ La web presenta los servicios de la empresa, está pensada para aparecer en las 
 | Sección | Ancla | Contenido |
 | --- | --- | --- |
 | Portada | `#inicio` | Presentación de PEB, llamadas a la acción y normativa de referencia (CTE, RITE, REBT, RIPCI) |
-| Servicios | `#servicios` | Resumen de las cuatro áreas de trabajo en tarjetas |
-| **01 · Legalización** | `#legalizacion` | Legalización de instalaciones, licencia de actividad, licencia de apertura, comunicación de obra y declaración responsable |
-| **02 · Proyectos básicos y de ejecución** | `#proyectos` | Fontanería y saneamiento, climatización y calefacción, ventilación, electricidad, protección contra incendios y energías renovables |
-| **03 · Dirección y gestión** | `#direccion` | Dirección facultativa de obra, mediciones y presupuestos |
-| **04 · Gestión energética** | `#gestion-energetica` | Proyecto de eficiencia energética, proyectos de sostenibilidad energética y certificación de eficiencia energética |
+| Servicios | `#servicios` | Resumen de las cinco áreas de trabajo en tarjetas |
+| **01 · Licencia de actividad** | `#licencia-actividad` | Estudio previo del local, proyecto de actividad, tramitación ante el ayuntamiento y certificado técnico final |
+| **02 · Legalización** | `#legalizacion` | Legalización de instalaciones, licencia de apertura, comunicación de obra y declaración responsable |
+| **03 · Proyectos básicos y de ejecución** | `#proyectos` | Fontanería y saneamiento, climatización y calefacción, ventilación, electricidad, protección contra incendios y energías renovables |
+| **04 · Dirección y gestión** | `#direccion` | Dirección facultativa de obra, mediciones y presupuestos |
+| **05 · Gestión energética** | `#gestion-energetica` | Proyecto de eficiencia energética, proyectos de sostenibilidad energética y certificación de eficiencia energética |
 | Cómo trabajamos | `#como-trabajamos` | Proceso en cuatro pasos: consulta, visita y presupuesto, proyecto técnico, tramitación |
 | Nosotros | `#nosotros` | Quiénes somos y nuestros valores |
 | Contacto | `#contacto` | Datos de contacto y formulario de solicitud de presupuesto |

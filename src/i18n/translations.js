@@ -31,6 +31,7 @@ export const translations = {
       ca: 'Català',
     },
     nav: {
+      actividad: 'Licencia de actividad',
       legalizacion: 'Legalización',
       proyectos: 'Proyectos',
       direccion: 'Dirección',
@@ -69,9 +70,38 @@ export const translations = {
     },
     categories: [
       {
+        id: 'licencia-actividad',
+        title: 'Licencia de actividad',
+        short: 'Estudio del local, proyecto de actividad y tramitación hasta que puedas abrir tu negocio.',
+        intro:
+          'Redactamos el proyecto de actividad y lo tramitamos según el régimen (licencia, comunicación o declaración) que corresponda a tu negocio, desde el primer estudio del local hasta la apertura.',
+        items: [
+          {
+            id: 'actividad-estudio',
+            title: 'Estudio previo del local',
+            text: 'Analizamos el local y la actividad que quieres desarrollar para saber qué régimen corresponde y qué adaptaciones hacen falta antes de invertir.',
+          },
+          {
+            id: 'actividad',
+            title: 'Proyecto de actividad',
+            text: 'Redactamos el proyecto técnico de la actividad: instalaciones, protección contra incendios, evacuación y accesibilidad, conforme a la normativa municipal.',
+          },
+          {
+            id: 'actividad-tramitacion',
+            title: 'Tramitación ante el ayuntamiento',
+            text: 'Presentamos la documentación y hacemos el seguimiento del expediente, incluidas las subsanaciones que pida el ayuntamiento.',
+          },
+          {
+            id: 'actividad-certificado',
+            title: 'Certificado técnico final',
+            text: 'Certificamos que el local y sus instalaciones se ajustan al proyecto y a la normativa para que puedas abrir con todas las garantías.',
+          },
+        ],
+      },
+      {
         id: 'legalizacion',
         title: 'Legalización',
-        short: 'Licencias de actividad, baja tensión, obra menor y otras legalizaciones.',
+        short: 'Baja tensión, obra menor, licencias de apertura y otras legalizaciones.',
         intro:
           'Te acompañamos en todo el proceso administrativo para que tu actividad, local o instalación cumpla la normativa y pueda funcionar con todas las garantías.',
         items: [
@@ -79,11 +109,6 @@ export const translations = {
             id: 'instalaciones',
             title: 'Legalización de instalaciones',
             text: 'Regularizamos instalaciones eléctricas, térmicas y de protección contra incendios: memoria o proyecto técnico, certificados y registro ante el organismo competente.',
-          },
-          {
-            id: 'actividad',
-            title: 'Licencia de actividad',
-            text: 'Redactamos el proyecto de actividad y lo tramitamos según el régimen (licencia, comunicación o declaración) que corresponda a tu negocio.',
           },
           {
             id: 'apertura',
@@ -305,6 +330,7 @@ export const translations = {
       ca: 'Català',
     },
     nav: {
+      actividad: "Llicència d'activitat",
       legalizacion: 'Legalització',
       proyectos: 'Projectes',
       direccion: 'Direcció',
@@ -343,9 +369,38 @@ export const translations = {
     },
     categories: [
       {
+        id: 'licencia-actividad',
+        title: "Llicència d'activitat",
+        short: "Estudi del local, projecte d'activitat i tramitació fins que puguis obrir el teu negoci.",
+        intro:
+          "Redactem el projecte d'activitat i el tramitem segons el règim (llicència, comunicació o declaració) que correspongui al teu negoci, des del primer estudi del local fins a l'obertura.",
+        items: [
+          {
+            id: 'actividad-estudio',
+            title: 'Estudi previ del local',
+            text: "Analitzem el local i l'activitat que vols desenvolupar per saber quin règim correspon i quines adaptacions calen abans d'invertir.",
+          },
+          {
+            id: 'actividad',
+            title: "Projecte d'activitat",
+            text: "Redactem el projecte tècnic de l'activitat: instal·lacions, protecció contra incendis, evacuació i accessibilitat, d'acord amb la normativa municipal.",
+          },
+          {
+            id: 'actividad-tramitacion',
+            title: "Tramitació davant l'ajuntament",
+            text: "Presentem la documentació i fem el seguiment de l'expedient, incloses les esmenes que demani l'ajuntament.",
+          },
+          {
+            id: 'actividad-certificado',
+            title: 'Certificat tècnic final',
+            text: 'Certifiquem que el local i les seves instal·lacions s\'ajusten al projecte i a la normativa perquè puguis obrir amb totes les garanties.',
+          },
+        ],
+      },
+      {
         id: 'legalizacion',
         title: 'Legalització',
-        short: "Llicències d'activitat, baixa tensió, obra menor i altres legalitzacions.",
+        short: "Baixa tensió, obra menor, llicències d'obertura i altres legalitzacions.",
         intro:
           "T'acompanyem en tot el procés administratiu perquè la teva activitat, local o instal·lació compleixi la normativa i pugui funcionar amb totes les garanties.",
         items: [
@@ -353,11 +408,6 @@ export const translations = {
             id: 'instalaciones',
             title: "Legalització d'instal·lacions",
             text: "Regularitzem instal·lacions elèctriques, tèrmiques i de protecció contra incendis: memòria o projecte tècnic, certificats i registre davant l'organisme competent.",
-          },
-          {
-            id: 'actividad',
-            title: "Llicència d'activitat",
-            text: "Redactem el projecte d'activitat i el tramitem segons el règim (llicència, comunicació o declaració) que correspongui al teu negoci.",
           },
           {
             id: 'apertura',
