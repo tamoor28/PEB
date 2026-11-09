@@ -211,6 +211,7 @@ export const translations = {
       },
     ],
     sectionCta: 'Contacta con nosotros',
+    moreInfo: 'Más información',
     process: {
       eyebrow: 'Cómo trabajamos',
       title: 'Un proceso claro, de principio a fin',
@@ -240,7 +241,7 @@ export const translations = {
     contact: {
       eyebrow: 'Contacto',
       title: 'Cuéntanos tu proyecto',
-      intro: 'Te respondemos con una primera valoración y un presupuesto sin compromiso.',
+      intro: 'Te responderemos con una primera valoración y, si es necesario, concertaremos una visita al local.',
       info: {
         email: 'Correo electrónico',
         phone: 'Teléfono',
@@ -509,6 +510,7 @@ export const translations = {
       },
     ],
     sectionCta: 'Contacta amb nosaltres',
+    moreInfo: 'Més informació',
     process: {
       eyebrow: 'Com treballem',
       title: 'Un procés clar, de principi a fi',
@@ -538,7 +540,7 @@ export const translations = {
     contact: {
       eyebrow: 'Contacte',
       title: "Explica'ns el teu projecte",
-      intro: 'Et responem amb una primera valoració i un pressupost sense compromís.',
+      intro: 'Et respondrem amb una primera valoració i, si cal, concertarem una visita al local.',
       info: {
         email: 'Correu electrònic',
         phone: 'Telèfon',

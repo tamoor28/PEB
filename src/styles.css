@@ -1221,6 +1221,25 @@ abbr[title] {
   color: var(--muted);
 }
 
+/* Enlace de la tarjeta a la página propia del servicio */
+.service-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.service-card__more svg {
+  transition: transform 0.5s var(--ease);
+}
+
+.service-card__more:hover svg {
+  transform: translateX(4px);
+}
+
 @media (max-width: 900px) {
   .service-section__inner {
     grid-template-columns: 1fr;
@@ -1923,4 +1942,285 @@ a.contact-detail__value:hover {
   margin-top: 1.75rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
+}
+
+/* ---------- Páginas de servicio ---------- */
+
+/* Portada más compacta que la de la principal */
+.hero--page {
+  padding-block: clamp(2rem, 5vw, 3.5rem) clamp(3.5rem, 8vw, 5.5rem);
+}
+
+.hero--page .hero__title {
+  font-size: clamp(2rem, 1rem + 3.8vw, 3.9rem);
+}
+
+.hero--page .hero__subtitle + .hero__subtitle {
+  margin-top: 1rem;
+}
+
+.breadcrumbs {
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-dark);
+  animation: fade-in 1s var(--ease) both;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.breadcrumbs li + li::before {
+  content: '›';
+  color: var(--accent-light);
+}
+
+.breadcrumbs a {
+  color: #e7dfd1;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.3s var(--ease);
+}
+
+.breadcrumbs a:hover {
+  text-decoration-color: currentColor;
+}
+
+.page-section {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+.page-section--alt {
+  background: var(--paper-2);
+}
+
+/* Título a la izquierda y contenido a la derecha, como los apartados de servicios de la principal */
+.page-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: 2.5rem clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+/* Los títulos de esta columna son preguntas largas: algo más pequeños que en el resto de secciones */
+.page-split .section-title {
+  font-size: clamp(1.9rem, 1.2rem + 2.2vw, 2.9rem);
+}
+
+/* Situaciones en las que hace falta el servicio */
+.situations {
+  border-top: 1px solid var(--ink);
+}
+
+.situation {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.situation__icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--card);
+  color: var(--accent);
+}
+
+.situation__title {
+  font-size: 1.12rem;
+  font-weight: 600;
+  font-stretch: 106%;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.situation__text {
+  margin-top: 0.35rem;
+  font-size: 0.97rem;
+  color: var(--muted);
+}
+
+/* Normativa aplicable */
+.norms {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--ink);
+}
+
+.norm {
+  display: grid;
+  grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr);
+  gap: 0.5rem 2rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.norm__code {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-stretch: 115%;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.norm__name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-stretch: 106%;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.norm__text {
+  max-width: 46em;
+  margin-top: 0.35rem;
+  font-size: 0.97rem;
+  color: var(--muted);
+}
+
+/* Tipos de negocio */
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.business-grid > li {
+  display: flex;
+}
+
+.business-card {
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--card);
+}
+
+.business-card__title {
+  margin-top: 1rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  font-stretch: 106%;
+  color: var(--ink);
+}
+
+.business-card__text {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Preguntas frecuentes: se abren y cierran sin JavaScript */
+.faq {
+  border-top: 1px solid var(--ink);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.35rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-stretch: 106%;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.faq__icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--card);
+  color: var(--ink);
+  transition:
+    transform 0.45s var(--ease),
+    background-color 0.45s var(--ease),
+    border-color 0.45s var(--ease),
+    color 0.45s var(--ease);
+}
+
+.faq__item summary:hover .faq__icon {
+  border-color: var(--ink);
+}
+
+.faq__item[open] .faq__icon {
+  transform: rotate(45deg);
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.faq__answer {
+  max-width: 46em;
+  padding-bottom: 1.4rem;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Otros servicios: tres tarjetas como las del resumen de la principal */
+.page-others {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+@media (max-width: 900px) {
+  .page-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .norm {
+    grid-template-columns: 1fr;
+  }
+
+  /* Los botones de las páginas de servicio pueden ocupar dos líneas en pantallas estrechas */
+  .hero--page .btn,
+  .page-includes .btn {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .faq__question {
+    font-size: 1.02rem;
+  }
 }

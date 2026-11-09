@@ -8,22 +8,22 @@ import { CatalanFlag } from './Flags.jsx'
 const LEGAL_KEYS = ['aviso', 'privacidad', 'cookies']
 
 export default function Footer({ onOpenLegal }) {
-  const { t } = useLanguage()
+  const { t, homeHref, anchor } = useLanguage()
   const { footer, nav, categories } = t
   const year = new Date().getFullYear()
 
   const companyLinks = [
-    { href: '#nosotros', label: nav.nosotros },
-    { href: '#como-trabajamos', label: footer.process },
-    { href: '#contacto', label: nav.contacto },
-    { href: '#contacto', label: footer.quote },
+    { href: anchor('nosotros'), label: nav.nosotros },
+    { href: anchor('como-trabajamos'), label: footer.process },
+    { href: anchor('contacto'), label: nav.contacto },
+    { href: anchor('contacto'), label: footer.quote },
   ]
 
   return (
     <footer className="footer">
       <div className="container footer__grid">
         <div className="footer__brand">
-          <a href="#inicio" aria-label={nav.home}>
+          <a href={homeHref} aria-label={nav.home}>
             <Logo />
           </a>
           <p className="footer__description">{footer.description}</p>
@@ -49,7 +49,7 @@ export default function Footer({ onOpenLegal }) {
           <ul className="footer__links">
             {categories.map((category) => (
               <li key={category.id}>
-                <a href={`#${category.id}`}>{category.title}</a>
+                <a href={anchor(category.id)}>{category.title}</a>
               </li>
             ))}
           </ul>
@@ -91,7 +91,7 @@ export default function Footer({ onOpenLegal }) {
 
       <div className="container">
         <div className="footer__bottom">
-          <p className="footer__copy">
+          <p className="footer__copy" suppressHydrationWarning>
             © {year} {site.legalName}. {footer.rights}
           </p>
           <ul className="footer__legal">
