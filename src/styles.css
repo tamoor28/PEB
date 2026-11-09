@@ -2213,7 +2213,7 @@ a.contact-detail__value:hover {
     grid-template-columns: 1fr;
   }
 
-  /* «Pide presupuesto sin compromiso» es largo: en pantallas estrechas puede ocupar dos líneas */
+  /* Los botones de las páginas de servicio pueden ocupar dos líneas en pantallas estrechas */
   .hero--page .btn,
   .page-includes .btn {
     white-space: normal;

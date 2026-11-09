@@ -47,7 +47,7 @@ Además de la página principal, los servicios pueden tener página propia en ca
 | --- | --- | --- |
 | Licencia de actividad | `/licencia-actividad-barcelona/` | `/ca/llicencia-activitat-barcelona/` |
 
-Tienen la misma cabecera, menú y pie que la principal, y este orden: migas de pan (Inicio › Servicios › servicio), portada con el título y el botón «Pide presupuesto sin compromiso», cuándo hace falta, qué incluye, normativa aplicable, tipos de negocio, cómo trabajamos, por qué PEB, preguntas frecuentes, formulario de contacto (con el servicio ya seleccionado) y enlaces a las demás páginas de servicio (la sección no aparece mientras solo haya una).
+Tienen la misma cabecera, menú y pie que la principal, y este orden: migas de pan (Inicio › Servicios › servicio), portada con el título y el botón «Contacta con nosotros», cuándo hace falta, qué incluye, normativa aplicable, tipos de negocio, cómo trabajamos, por qué PEB, preguntas frecuentes, formulario de contacto (con el servicio ya seleccionado) y enlaces a las demás páginas de servicio (la sección no aparece mientras solo haya una).
 
 - **Idioma:** el logo lleva a la principal del mismo idioma y el selector ES/CA abre la misma página en el otro idioma. Los enlaces del menú llevan a las secciones de la principal.
 - **Enlaces desde la principal:** la tarjeta «Licencia de actividad» del resumen de servicios lleva a su página. Cuando se activen las demás, las tarjetas de «Proyectos básicos y de ejecución» tendrán un enlace «Más información» (`CARD_PAGES` en `src/data/pages.js`).

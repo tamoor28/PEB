@@ -4,7 +4,7 @@ export default {
   common: {
     breadcrumb: { label: 'Ruta de navegación', home: 'Inicio', services: 'Servicios' },
     eyebrow: 'Ingeniería · Barcelona',
-    cta: 'Pide presupuesto sin compromiso',
+    cta: 'Contacta con nosotros',
     city: 'Barcelona y provincia',
     labels: {
       when: 'Cuándo hace falta',
@@ -61,7 +61,7 @@ export default {
       name: 'Licencia de actividad',
       title: 'Licencia de actividad en Barcelona | PEB Enginyeria',
       description:
-        'Tramitamos tu licencia de actividad en Barcelona: estudio del local, proyecto técnico y gestión con el ayuntamiento hasta la apertura. Pide presupuesto.',
+        'Tramitamos tu licencia de actividad en Barcelona: estudio del local, proyecto técnico y gestión con el ayuntamiento hasta la apertura. Contacta con nosotros.',
       h1: 'Licencia de actividad en Barcelona',
       intro: [
         'Si vas a abrir un negocio, cambiar de actividad o reformar tu local, el ayuntamiento necesita comprobar que el local es apto para lo que vas a hacer. Según la actividad, el trámite será una licencia, una comunicación previa o una declaración responsable.',
@@ -193,7 +193,7 @@ export default {
       name: 'Proyectos eléctricos de baja tensión',
       title: 'Proyectos de baja tensión en Barcelona | PEB Enginyeria',
       description:
-        'Proyectos y legalización de instalaciones eléctricas de baja tensión en Barcelona según el REBT, para locales y naves. Pide presupuesto sin compromiso.',
+        'Proyectos y legalización de instalaciones eléctricas de baja tensión en Barcelona según el REBT, para locales y naves. Contacta con nosotros.',
       h1: 'Proyectos eléctricos de baja tensión en Barcelona',
       intro: [
         'La instalación eléctrica de un local, una oficina o una nave tiene que cumplir el Reglamento Electrotécnico para Baja Tensión (REBT) y estar legalizada para poder contratar el suministro, ampliar la potencia o abrir al público.',
@@ -330,7 +330,7 @@ export default {
       name: 'Protección contra incendios',
       title: 'Protección contra incendios en Barcelona | PEB Enginyeria',
       description:
-        'Proyectos de protección contra incendios en Barcelona según el CTE DB-SI y el RIPCI: evacuación, detección y extinción para tu local. Pide presupuesto.',
+        'Proyectos de protección contra incendios en Barcelona según el CTE DB-SI y el RIPCI: evacuación, detección y extinción para tu local. Contacta con nosotros.',
       h1: 'Protección contra incendios en Barcelona',
       intro: [
         'Un local abierto al público, una oficina o una nave tienen que estar preparados para que, si hay un incendio, se detecte a tiempo, se pueda controlar y las personas salgan con seguridad. Es uno de los puntos que más se revisan al tramitar una licencia de actividad.',
@@ -462,7 +462,7 @@ export default {
       name: 'Climatización y ventilación',
       title: 'Climatización y ventilación en Barcelona | PEB Enginyeria',
       description:
-        'Proyectos de climatización y ventilación en Barcelona según el RITE y el CTE DB-HS: aire acondicionado, aerotermia y extracción de humos. Pide presupuesto.',
+        'Proyectos de climatización y ventilación en Barcelona según el RITE y el CTE DB-HS: aire acondicionado, aerotermia y extracción de humos. Contacta con nosotros.',
       h1: 'Climatización y ventilación en Barcelona',
       intro: [
         'Un local o una oficina con buena climatización y buena ventilación es más cómodo, más sano y gasta menos energía. Estas instalaciones tienen que cumplir el Reglamento de Instalaciones Térmicas en los Edificios (RITE) y, a partir de cierta potencia, necesitan un proyecto.',
