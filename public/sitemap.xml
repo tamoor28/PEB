@@ -28,46 +28,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://pebenginyeria.com/proyectos-baja-tension-barcelona/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pebenginyeria.com/proyectos-baja-tension-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://pebenginyeria.com/ca/projectes-baixa-tensio-barcelona/" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pebenginyeria.com/ca/projectes-baixa-tensio-barcelona/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pebenginyeria.com/proyectos-baja-tension-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://pebenginyeria.com/ca/projectes-baixa-tensio-barcelona/" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pebenginyeria.com/proteccion-contra-incendios-barcelona/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pebenginyeria.com/proteccion-contra-incendios-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://pebenginyeria.com/ca/proteccio-contra-incendis-barcelona/" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pebenginyeria.com/ca/proteccio-contra-incendis-barcelona/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pebenginyeria.com/proteccion-contra-incendios-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://pebenginyeria.com/ca/proteccio-contra-incendis-barcelona/" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pebenginyeria.com/climatizacion-ventilacion-barcelona/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pebenginyeria.com/climatizacion-ventilacion-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://pebenginyeria.com/ca/climatitzacio-ventilacio-barcelona/" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pebenginyeria.com/ca/climatitzacio-ventilacio-barcelona/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pebenginyeria.com/climatizacion-ventilacion-barcelona/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://pebenginyeria.com/ca/climatitzacio-ventilacio-barcelona/" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 </urlset>

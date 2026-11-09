@@ -1,4 +1,4 @@
-// Pàgines de servei en català. Els marcadors entre claudàtors ([PRECIO DESDE], [PLAZO HABITUAL]) s'han de
+// Pàgines de servei en català. El marcador entre claudàtors ([PLAZO HABITUAL]) s'ha de
 // substituir per la dada real abans de publicar.
 export default {
   common: {
@@ -172,7 +172,7 @@ export default {
         },
         {
           q: "Quant costa una llicència d'activitat?",
-          a: "Depèn de l'activitat, de la superfície i de la feina tècnica necessària. Després de visitar el local t'enviem un pressupost tancat i sense compromís; com a orientació, parteix de [PRECIO DESDE]. Als honoraris s'hi han de sumar les taxes municipals, que fixa cada ajuntament.",
+          a: "Depèn de l'activitat, de la superfície i de la feina tècnica necessària. Després de visitar el local t'enviem un pressupost tancat i sense compromís, ajustat al teu local. Als honoraris s'hi han de sumar les taxes municipals, que fixa cada ajuntament.",
         },
         {
           q: "Si el local ja tenia llicència, n'he de tramitar una de nova?",
@@ -321,7 +321,7 @@ export default {
         },
         {
           q: 'Quant costa un projecte de baixa tensió?',
-          a: "Depèn de la potència, de la superfície i de si cal projecte o memòria tècnica. Després de la visita t'enviem un pressupost tancat i sense compromís; com a orientació, parteix de [PRECIO DESDE].",
+          a: "Depèn de la potència, de la superfície i de si cal projecte o memòria tècnica. Després de la visita t'enviem un pressupost tancat i sense compromís, ajustat al teu local.",
         },
       ],
     },
@@ -453,7 +453,7 @@ export default {
         },
         {
           q: 'Quant costa un projecte de protecció contra incendis?',
-          a: "Depèn de la superfície, de l'activitat i de les instal·lacions que calguin. Després de la visita t'enviem un pressupost tancat i sense compromís; com a orientació, parteix de [PRECIO DESDE].",
+          a: "Depèn de la superfície, de l'activitat i de les instal·lacions que calguin. Després de la visita t'enviem un pressupost tancat i sense compromís, ajustat al teu local.",
         },
       ],
     },
@@ -579,7 +579,7 @@ export default {
         },
         {
           q: 'Quant costa un projecte de climatització?',
-          a: "Depèn de la superfície, de l'ús i del tipus de sistema. Després de la visita t'enviem un pressupost tancat i sense compromís; com a orientació, parteix de [PRECIO DESDE].",
+          a: "Depèn de la superfície, de l'ús i del tipus de sistema. Després de la visita t'enviem un pressupost tancat i sense compromís, ajustat al teu local.",
         },
       ],
     },

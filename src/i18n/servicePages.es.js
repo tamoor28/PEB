@@ -1,5 +1,5 @@
-// Páginas de servicio en castellano. Los marcadores entre corchetes ([PRECIO DESDE], [PLAZO HABITUAL]) hay que
-// sustituirlos por el dato real antes de publicar.
+// Páginas de servicio en castellano. El marcador entre corchetes ([PLAZO HABITUAL]) hay que
+// sustituirlo por el dato real antes de publicar.
 export default {
   common: {
     breadcrumb: { label: 'Ruta de navegación', home: 'Inicio', services: 'Servicios' },
@@ -172,7 +172,7 @@ export default {
         },
         {
           q: '¿Cuánto cuesta una licencia de actividad?',
-          a: 'Depende de la actividad, de la superficie y del trabajo técnico necesario. Después de visitar el local te enviamos un presupuesto cerrado y sin compromiso; como orientación, parte de [PRECIO DESDE]. A los honorarios hay que sumar las tasas municipales, que fija cada ayuntamiento.',
+          a: 'Depende de la actividad, de la superficie y del trabajo técnico necesario. Después de visitar el local te enviamos un presupuesto cerrado y sin compromiso, ajustado a tu local. A los honorarios hay que sumar las tasas municipales, que fija cada ayuntamiento.',
         },
         {
           q: 'Si el local ya tenía licencia, ¿tengo que tramitar una nueva?',
@@ -321,7 +321,7 @@ export default {
         },
         {
           q: '¿Cuánto cuesta un proyecto de baja tensión?',
-          a: 'Depende de la potencia, de la superficie y de si hace falta proyecto o memoria técnica. Tras la visita te enviamos un presupuesto cerrado y sin compromiso; como orientación, parte de [PRECIO DESDE].',
+          a: 'Depende de la potencia, de la superficie y de si hace falta proyecto o memoria técnica. Tras la visita te enviamos un presupuesto cerrado y sin compromiso, ajustado a tu local.',
         },
       ],
     },
@@ -453,7 +453,7 @@ export default {
         },
         {
           q: '¿Cuánto cuesta un proyecto de protección contra incendios?',
-          a: 'Depende de la superficie, de la actividad y de las instalaciones que hagan falta. Tras la visita te enviamos un presupuesto cerrado y sin compromiso; como orientación, parte de [PRECIO DESDE].',
+          a: 'Depende de la superficie, de la actividad y de las instalaciones que hagan falta. Tras la visita te enviamos un presupuesto cerrado y sin compromiso, ajustado a tu local.',
         },
       ],
     },
@@ -579,7 +579,7 @@ export default {
         },
         {
           q: '¿Cuánto cuesta un proyecto de climatización?',
-          a: 'Depende de la superficie, del uso y del tipo de sistema. Tras la visita te enviamos un presupuesto cerrado y sin compromiso; como orientación, parte de [PRECIO DESDE].',
+          a: 'Depende de la superficie, del uso y del tipo de sistema. Tras la visita te enviamos un presupuesto cerrado y sin compromiso, ajustado a tu local.',
         },
       ],
     },

@@ -41,28 +41,25 @@ La web presenta los servicios de la empresa, está pensada para aparecer en las 
 
 ## Páginas de servicio
 
-Además de la página principal, cuatro servicios tienen página propia en castellano y en catalán, pensada para las búsquedas locales («licencia de actividad Barcelona», «proyecto baja tensión Barcelona»…):
+Además de la página principal, los servicios pueden tener página propia en castellano y en catalán, pensada para las búsquedas locales («licencia de actividad Barcelona»…). De momento solo está publicada la de licencia de actividad; los textos de las otras tres (baja tensión, protección contra incendios y climatización) ya están en `src/i18n/servicePages.*.js` y se activan siguiendo «Añadir otra página de servicio»:
 
 | Servicio | Castellano | Catalán |
 | --- | --- | --- |
 | Licencia de actividad | `/licencia-actividad-barcelona/` | `/ca/llicencia-activitat-barcelona/` |
-| Proyectos eléctricos de baja tensión | `/proyectos-baja-tension-barcelona/` | `/ca/projectes-baixa-tensio-barcelona/` |
-| Protección contra incendios (PCI) | `/proteccion-contra-incendios-barcelona/` | `/ca/proteccio-contra-incendis-barcelona/` |
-| Climatización y ventilación | `/climatizacion-ventilacion-barcelona/` | `/ca/climatitzacio-ventilacio-barcelona/` |
 
-Tienen la misma cabecera, menú y pie que la principal, y este orden: migas de pan (Inicio › Servicios › servicio), portada con el título y el botón «Pide presupuesto sin compromiso», cuándo hace falta, qué incluye, normativa aplicable, tipos de negocio, cómo trabajamos, por qué PEB, preguntas frecuentes, formulario de contacto (con el servicio ya seleccionado) y enlaces a los otros tres servicios.
+Tienen la misma cabecera, menú y pie que la principal, y este orden: migas de pan (Inicio › Servicios › servicio), portada con el título y el botón «Pide presupuesto sin compromiso», cuándo hace falta, qué incluye, normativa aplicable, tipos de negocio, cómo trabajamos, por qué PEB, preguntas frecuentes, formulario de contacto (con el servicio ya seleccionado) y enlaces a las demás páginas de servicio (la sección no aparece mientras solo haya una).
 
 - **Idioma:** el logo lleva a la principal del mismo idioma y el selector ES/CA abre la misma página en el otro idioma. Los enlaces del menú llevan a las secciones de la principal.
-- **Enlaces desde la principal:** la tarjeta «Licencia de actividad» del resumen de servicios lleva a su página, y las tarjetas de electricidad, protección contra incendios, climatización y ventilación (dentro de «Proyectos básicos y de ejecución») tienen un enlace «Más información».
+- **Enlaces desde la principal:** la tarjeta «Licencia de actividad» del resumen de servicios lleva a su página. Cuando se activen las demás, las tarjetas de «Proyectos básicos y de ejecución» tendrán un enlace «Más información» (`CARD_PAGES` en `src/data/pages.js`).
 - **SEO:** cada página tiene título y descripción propios, `canonical`, `hreflang` (es, ca y x-default), Open Graph y datos estructurados `Service`, `FAQPage` y `BreadcrumbList` (generados en `src/seo/serviceHead.js`). Están en `public/sitemap.xml`.
 - **Prerenderizado:** al compilar, el contenido de estas páginas se escribe ya dentro del HTML, de modo que Google lo lee sin ejecutar JavaScript. Después React las activa en el navegador. La principal funciona igual que antes.
 
-> **Marcadores pendientes.** Las preguntas frecuentes llevan `[PRECIO DESDE]` (precio, en las cuatro páginas) y `[PLAZO HABITUAL]` (plazo del trámite, en licencia de actividad). Hay que sustituirlos en `src/i18n/servicePages.es.js` y `src/i18n/servicePages.ca.js` antes de publicar. Para encontrarlos: `grep -nE "\[(PRECIO|PLAZO)" src/i18n/servicePages.*.js`.
+> **Marcador pendiente.** La pregunta «¿Cuánto tarda el trámite?» de licencia de actividad lleva `[PLAZO HABITUAL]`. Hay que sustituirlo en `src/i18n/servicePages.es.js` y `src/i18n/servicePages.ca.js` antes de publicar. Las páginas no muestran precios: cada local tiene su presupuesto.
 
 **Añadir otra página de servicio:**
 
 1. Sus textos en `src/i18n/servicePages.es.js` y `src/i18n/servicePages.ca.js` (dentro de `pages`), y su icono en `PAGE_ICONS` de `src/pages/ServicePage.jsx`.
-2. Sus dos URL en `SERVICE_PAGES` de `src/data/pages.js`.
+2. Sus dos URL en `SERVICE_PAGES` de `src/data/pages.js` (y, si alguna tarjeta de la principal debe enlazarla, en `CARD_PAGES`).
 3. Una copia de `licencia-actividad-barcelona/index.html` en cada carpeta nueva, cambiando `lang`, `data-page` y `data-lang`, y las dos rutas en `PAGES` de `vite.config.js`.
 4. Las dos URL en `public/sitemap.xml`.
 

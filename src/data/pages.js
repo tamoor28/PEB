@@ -5,21 +5,17 @@ import { site } from './site.js'
 // ⚠️ Si se añade una página, hay que añadir también su HTML a vite.config.js y sus URL a public/sitemap.xml.
 export const HOME = { es: '/', ca: '/ca/' }
 
+// De momento solo se publica licencia de actividad. Los textos de baja tensión, incendios y climatización ya están
+// en src/i18n/servicePages.*.js; para activarlos, ver «Añadir otra página de servicio» en el README.
 export const SERVICE_PAGES = [
   { key: 'licencia-actividad', es: '/licencia-actividad-barcelona/', ca: '/ca/llicencia-activitat-barcelona/' },
-  { key: 'baja-tension', es: '/proyectos-baja-tension-barcelona/', ca: '/ca/projectes-baixa-tensio-barcelona/' },
-  { key: 'incendios', es: '/proteccion-contra-incendios-barcelona/', ca: '/ca/proteccio-contra-incendis-barcelona/' },
-  { key: 'climatizacion', es: '/climatizacion-ventilacion-barcelona/', ca: '/ca/climatitzacio-ventilacio-barcelona/' },
 ]
 
 // Apartados y tarjetas de la principal que enlazan a una página de servicio
 export const CATEGORY_PAGES = { 'licencia-actividad': 'licencia-actividad' }
-export const CARD_PAGES = {
-  electricidad: 'baja-tension',
-  incendios: 'incendios',
-  climatizacion: 'climatizacion',
-  ventilacion: 'climatizacion',
-}
+// Tarjetas de «Proyectos básicos y de ejecución» con enlace «Más información». Al activar sus páginas:
+// electricidad: 'baja-tension', incendios: 'incendios', climatizacion: 'climatizacion', ventilacion: 'climatizacion'
+export const CARD_PAGES = {}
 
 export const pagePath = (page, lang) => (page ? SERVICE_PAGES.find((item) => item.key === page)[lang] : HOME[lang])
 

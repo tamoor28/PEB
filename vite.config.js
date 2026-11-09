@@ -12,12 +12,6 @@ const PAGES = [
   'ca/index.html',
   'licencia-actividad-barcelona/index.html',
   'ca/llicencia-activitat-barcelona/index.html',
-  'proyectos-baja-tension-barcelona/index.html',
-  'ca/projectes-baixa-tensio-barcelona/index.html',
-  'proteccion-contra-incendios-barcelona/index.html',
-  'ca/proteccio-contra-incendis-barcelona/index.html',
-  'climatizacion-ventilacion-barcelona/index.html',
-  'ca/climatitzacio-ventilacio-barcelona/index.html',
 ]
 
 // BASE_PATH permite publicar en una subcarpeta (p. ej. GitHub Pages: /PEB/).

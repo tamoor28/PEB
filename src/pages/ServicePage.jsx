@@ -314,42 +314,44 @@ export default function ServicePage() {
           extraOption={extraOption}
         />
 
-        <section className="section page-section" aria-labelledby="others-title">
-          <div className="container">
-            <div className="section-head" data-reveal>
-              <p className="label">{common.labels.others}</p>
-              <h2 id="others-title" className="section-title">
-                {common.othersTitle}
-              </h2>
+        {others.length > 0 && (
+          <section className="section page-section" aria-labelledby="others-title">
+            <div className="container">
+              <div className="section-head" data-reveal>
+                <p className="label">{common.labels.others}</p>
+                <h2 id="others-title" className="section-title">
+                  {common.othersTitle}
+                </h2>
+              </div>
+              <ul className="overview__grid page-others">
+                {others.map((item, index) => {
+                  const Icon = PAGE_ICONS[item.key]
+                  const other = pages[item.key]
+                  return (
+                    <li key={item.key} data-reveal style={{ '--i': index }}>
+                      <a href={link(pagePath(item.key, lang))} className="overview-card">
+                        <span className="overview-card__top">
+                          <span className="icon-box icon-box--lg" aria-hidden="true">
+                            <Icon size={24} strokeWidth={1.5} />
+                          </span>
+                        </span>
+                        <h3 className="overview-card__title">{other.name}</h3>
+                        <span className="overview-card__text">{other.short}</span>
+                        <span className="overview-card__footer">
+                          <span className="overview-card__count">{common.city}</span>
+                          <span className="overview-card__more">
+                            {common.othersMore}
+                            <ArrowRight size={16} aria-hidden="true" />
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
-            <ul className="overview__grid page-others">
-              {others.map((item, index) => {
-                const Icon = PAGE_ICONS[item.key]
-                const other = pages[item.key]
-                return (
-                  <li key={item.key} data-reveal style={{ '--i': index }}>
-                    <a href={link(pagePath(item.key, lang))} className="overview-card">
-                      <span className="overview-card__top">
-                        <span className="icon-box icon-box--lg" aria-hidden="true">
-                          <Icon size={24} strokeWidth={1.5} />
-                        </span>
-                      </span>
-                      <h3 className="overview-card__title">{other.name}</h3>
-                      <span className="overview-card__text">{other.short}</span>
-                      <span className="overview-card__footer">
-                        <span className="overview-card__count">{common.city}</span>
-                        <span className="overview-card__more">
-                          {common.othersMore}
-                          <ArrowRight size={16} aria-hidden="true" />
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        </section>
+          </section>
+        )}
       </main>
       <Footer onOpenLegal={setLegal} />
       <LegalModal type={legal} onClose={() => setLegal(null)} />
