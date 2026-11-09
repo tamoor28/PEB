@@ -1,5 +1,4 @@
-// Pàgines de servei en català. El marcador entre claudàtors ([PLAZO HABITUAL]) s'ha de
-// substituir per la dada real abans de publicar.
+// Pàgines de servei en català. No s'indiquen preus ni terminis: depenen de cada local.
 export default {
   common: {
     breadcrumb: { label: 'Ruta de navegació', home: 'Inici', services: 'Serveis' },
@@ -168,7 +167,7 @@ export default {
         },
         {
           q: 'Quant triga el tràmit?',
-          a: "Depèn del règim, de l'ajuntament i de si el local necessita obres. Després de l'estudi previ et donem una previsió realista per al teu cas. Com a orientació, el procés sol durar [PLAZO HABITUAL].",
+          a: "Depèn del règim, de l'ajuntament i de si el local necessita obres. Després de l'estudi previ et donem una previsió realista per al teu cas.",
         },
         {
           q: "Quant costa una llicència d'activitat?",

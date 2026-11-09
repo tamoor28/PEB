@@ -54,7 +54,7 @@ Tienen la misma cabecera, menú y pie que la principal, y este orden: migas de p
 - **SEO:** cada página tiene título y descripción propios, `canonical`, `hreflang` (es, ca y x-default), Open Graph y datos estructurados `Service`, `FAQPage` y `BreadcrumbList` (generados en `src/seo/serviceHead.js`). Están en `public/sitemap.xml`.
 - **Prerenderizado:** al compilar, el contenido de estas páginas se escribe ya dentro del HTML, de modo que Google lo lee sin ejecutar JavaScript. Después React las activa en el navegador. La principal funciona igual que antes.
 
-> **Marcador pendiente.** La pregunta «¿Cuánto tarda el trámite?» de licencia de actividad lleva `[PLAZO HABITUAL]`. Hay que sustituirlo en `src/i18n/servicePages.es.js` y `src/i18n/servicePages.ca.js` antes de publicar. Las páginas no muestran precios: cada local tiene su presupuesto.
+> **Sin precios ni plazos.** Las páginas no dan precios ni plazos orientativos: dependen de cada local y se concretan después de verlo.
 
 **Añadir otra página de servicio:**
 

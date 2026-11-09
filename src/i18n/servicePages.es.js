@@ -1,5 +1,4 @@
-// Páginas de servicio en castellano. El marcador entre corchetes ([PLAZO HABITUAL]) hay que
-// sustituirlo por el dato real antes de publicar.
+// Páginas de servicio en castellano. No se indican precios ni plazos: dependen de cada local.
 export default {
   common: {
     breadcrumb: { label: 'Ruta de navegación', home: 'Inicio', services: 'Servicios' },
@@ -168,7 +167,7 @@ export default {
         },
         {
           q: '¿Cuánto tarda el trámite?',
-          a: 'Depende del régimen, del ayuntamiento y de si el local necesita obras. Tras el estudio previo te damos una previsión realista para tu caso. Como orientación, el proceso suele llevar [PLAZO HABITUAL].',
+          a: 'Depende del régimen, del ayuntamiento y de si el local necesita obras. Tras el estudio previo te damos una previsión realista para tu caso.',
         },
         {
           q: '¿Cuánto cuesta una licencia de actividad?',
