@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useLanguage } from './i18n/LanguageContext.jsx'
 import useReveal from './hooks/useReveal.js'
 import Header from './components/Header.jsx'
@@ -16,6 +16,13 @@ export default function App() {
   const [service, setService] = useState('')
   const [legal, setLegal] = useState(null)
   useReveal(lang)
+
+  // Al llegar con una sección en la URL (p. ej. «Nosotros» desde el menú de una página de servicio), la sección
+  // aún no existe cuando el navegador intenta bajar a ella: se baja al montarse la página.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'instant' })
+  }, [])
 
   return (
     <>

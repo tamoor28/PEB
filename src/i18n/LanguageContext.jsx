@@ -7,6 +7,8 @@ import { HOME, linkFrom, pagePath } from '../data/pages.js'
 const STORAGE_KEY = 'peb-lang'
 const DEFAULT_LANGUAGE = 'es'
 const BASE = import.meta.env.BASE_URL
+// Con base relativa ('./', solo para vistas previas) no se sabe dónde está la raíz de la web
+const RELATIVE_BASE = BASE.startsWith('.')
 
 const LanguageContext = createContext(null)
 
@@ -39,6 +41,9 @@ function setAttr(selector, attr, value) {
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(getInitialLanguage)
+  // Página que se ha cargado (/ o /ca/): con base relativa la URL no cambia al cambiar de idioma y los enlaces
+  // se calculan desde aquí
+  const [loadedPath] = useState(() => HOME[languageFromPath() ?? DEFAULT_LANGUAGE])
   const t = translations[lang]
 
   useEffect(() => {
@@ -61,7 +66,7 @@ export function LanguageProvider({ children }) {
 
     const { pathname, search, hash } = window.location
     const target = pathFor(lang)
-    if (pathname !== target) window.history.replaceState(window.history.state, '', `${target}${search}${hash}`)
+    if (!RELATIVE_BASE && pathname !== target) window.history.replaceState(window.history.state, '', `${target}${search}${hash}`)
   }, [lang, t])
 
   // Fundido suave entre idiomas con la View Transitions API (si el navegador la soporta).
@@ -82,9 +87,9 @@ export function LanguageProvider({ children }) {
       page: null,
       homeHref: '#inicio',
       anchor: (id) => `#${id}`,
-      link: (toPath) => linkFrom(HOME[lang], toPath),
+      link: (toPath) => linkFrom(RELATIVE_BASE ? loadedPath : HOME[lang], toPath),
     }),
-    [lang, changeLanguage, t],
+    [lang, changeLanguage, t, loadedPath],
   )
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
 }

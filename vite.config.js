@@ -22,9 +22,14 @@ const PAGES = [
 
 // BASE_PATH permite publicar en una subcarpeta (p. ej. GitHub Pages: /PEB/).
 // Con dominio propio se deja en '/'.
+const base = process.env.BASE_PATH || '/'
+
 export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react()],
-  base: process.env.BASE_PATH || '/',
+  base,
+  // Vite compila para servidor con base '/' aunque sea relativa ('./'): se fija la misma que en el navegador
+  // para que los enlaces prerenderizados coincidan con los de React al activarse.
+  define: isSsrBuild ? { 'import.meta.env.BASE_URL': JSON.stringify(base) } : {},
   // La compilación para servidor (--ssr) solo genera el prerenderizado; las páginas las compila la del navegador.
   build: isSsrBuild
     ? {}
