@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { flushSync } from 'react-dom'
 import { translations, SUPPORTED_LANGUAGES } from './translations.js'
 import { site } from '../data/site.js'
+import { HOME, linkFrom, pagePath } from '../data/pages.js'
 
 const STORAGE_KEY = 'peb-lang'
 const DEFAULT_LANGUAGE = 'es'
@@ -73,7 +74,53 @@ export function LanguageProvider({ children }) {
     document.startViewTransition(() => flushSync(() => setLang(next)))
   }, [])
 
-  const value = useMemo(() => ({ lang, setLang: changeLanguage, t }), [lang, changeLanguage, t])
+  const value = useMemo(
+    () => ({
+      lang,
+      setLang: changeLanguage,
+      t,
+      page: null,
+      homeHref: '#inicio',
+      anchor: (id) => `#${id}`,
+      link: (toPath) => linkFrom(HOME[lang], toPath),
+    }),
+    [lang, changeLanguage, t],
+  )
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
+}
+
+// Secciones que también existen en las páginas de servicio: sus enlaces se quedan en la propia página
+const PAGE_SECTIONS = ['inicio', 'contacto', 'como-trabajamos']
+
+// Páginas de servicio: el idioma viene fijado por la página (su HTML ya está escrito en ese idioma). Los enlaces
+// del menú llevan a la principal del mismo idioma y el selector de idioma abre la misma página en el otro.
+export function PageLanguageProvider({ page, lang, children }) {
+  const t = translations[lang]
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, lang)
+    } catch {
+      /* almacenamiento bloqueado */
+    }
+  }, [lang])
+
+  const value = useMemo(() => {
+    const link = (toPath) => linkFrom(pagePath(page, lang), toPath)
+    const homeHref = link(HOME[lang])
+    return {
+      lang,
+      setLang: (next) => {
+        if (next !== lang) window.location.assign(link(pagePath(page, next)))
+      },
+      t,
+      page,
+      homeHref,
+      anchor: (id) => (PAGE_SECTIONS.includes(id) ? `#${id}` : `${homeHref}#${id}`),
+      link,
+    }
+  }, [page, lang, t])
+
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
 }
 

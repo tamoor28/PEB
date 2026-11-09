@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Página de servicio: el título, la descripción, las URL canónicas, hreflang, Open Graph, los datos estructurados y el contenido los escribe scripts/prerender.mjs al compilar (textos en src/i18n/servicePages.es.js) -->
+    <!--head-->
+    <script>
+      // Oculta los bloques animados antes de pintar, como hace main.jsx en la principal, para que no parpadeen al activarse
+      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches)
+        document.documentElement.classList.add('has-reveal')
+    </script>
+  </head>
+  <body>
+    <div id="root" data-page="licencia-actividad" data-lang="es"><!--app--></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

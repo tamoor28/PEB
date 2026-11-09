@@ -1,9 +1,10 @@
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { categoryIcons, serviceIcons } from '../data/icons.js'
+import { CARD_PAGES, pagePath } from '../data/pages.js'
 
 export default function ServiceSection({ category, index, onRequestQuote }) {
-  const { t } = useLanguage()
+  const { t, lang, link } = useLanguage()
   const CategoryIcon = categoryIcons[category.id]
   const titleId = `${category.id}-title`
 
@@ -33,6 +34,7 @@ export default function ServiceSection({ category, index, onRequestQuote }) {
         <ul className="service-grid">
           {category.items.map((item, itemIndex) => {
             const Icon = serviceIcons[item.id]
+            const page = CARD_PAGES[item.id]
             return (
               <li key={item.id} data-reveal style={{ '--i': itemIndex }}>
                 <article className="service-card">
@@ -41,6 +43,12 @@ export default function ServiceSection({ category, index, onRequestQuote }) {
                   </span>
                   <h3 className="service-card__title">{item.title}</h3>
                   <p className="service-card__text">{item.text}</p>
+                  {page && (
+                    <a href={link(pagePath(page, lang))} className="service-card__more">
+                      {t.moreInfo}
+                      <ArrowRight size={16} aria-hidden="true" />
+                    </a>
+                  )}
                 </article>
               </li>
             )

@@ -1,9 +1,10 @@
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { categoryIcons } from '../data/icons.js'
+import { CATEGORY_PAGES, pagePath } from '../data/pages.js'
 
 export default function ServicesOverview() {
-  const { t } = useLanguage()
+  const { t, lang, link } = useLanguage()
   const { overview, categories } = t
 
   return (
@@ -20,9 +21,11 @@ export default function ServicesOverview() {
         <ul className="overview__grid">
           {categories.map((category, index) => {
             const Icon = categoryIcons[category.id]
+            // Los servicios con página propia llevan a ella; el resto, a su apartado de esta página
+            const page = CATEGORY_PAGES[category.id]
             return (
               <li key={category.id} data-reveal style={{ '--i': index }}>
-                <a href={`#${category.id}`} className="overview-card">
+                <a href={page ? link(pagePath(page, lang)) : `#${category.id}`} className="overview-card">
                   <span className="overview-card__top">
                     <span className="icon-box icon-box--lg" aria-hidden="true">
                       <Icon size={24} strokeWidth={1.5} />

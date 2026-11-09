@@ -8,9 +8,11 @@ const OTHER = 'otro'
 // Web3Forms reenvía cada mensaje del formulario al correo con el que se creó la clave (peb.enginyeria@outlook.com).
 const FORM_ENDPOINT = 'https://api.web3forms.com/submit'
 
-export default function Contact({ service, onServiceChange, onOpenLegal }) {
+// extraOption: servicio que no es un apartado de la principal (p. ej. en su página de servicio), { id, title }
+export default function Contact({ service, onServiceChange, onOpenLegal, extraOption }) {
   const { t } = useLanguage()
-  const { contact, categories } = t
+  const { contact } = t
+  const categories = extraOption ? [extraOption, ...t.categories] : t.categories
   const { form, info } = contact
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
 

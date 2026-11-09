@@ -5,18 +5,32 @@ import react from '@vitejs/plugin-react'
 
 const root = fileURLToPath(new URL('.', import.meta.url))
 
+// Una página HTML por idioma y página, cada una con sus metadatos para Google:
+// la principal (/ y /ca/) y las páginas de servicio (ver src/data/pages.js).
+const PAGES = [
+  'index.html',
+  'ca/index.html',
+  'licencia-actividad-barcelona/index.html',
+  'ca/llicencia-activitat-barcelona/index.html',
+  'proyectos-baja-tension-barcelona/index.html',
+  'ca/projectes-baixa-tensio-barcelona/index.html',
+  'proteccion-contra-incendios-barcelona/index.html',
+  'ca/proteccio-contra-incendis-barcelona/index.html',
+  'climatizacion-ventilacion-barcelona/index.html',
+  'ca/climatitzacio-ventilacio-barcelona/index.html',
+]
+
 // BASE_PATH permite publicar en una subcarpeta (p. ej. GitHub Pages: /PEB/).
 // Con dominio propio se deja en '/'.
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react()],
   base: process.env.BASE_PATH || '/',
-  build: {
-    rollupOptions: {
-      // Una página HTML por idioma: / (castellano) y /ca/ (catalán), cada una con sus metadatos para Google.
-      input: {
-        es: resolve(root, 'index.html'),
-        ca: resolve(root, 'ca/index.html'),
+  // La compilación para servidor (--ssr) solo genera el prerenderizado; las páginas las compila la del navegador.
+  build: isSsrBuild
+    ? {}
+    : {
+        rollupOptions: {
+          input: Object.fromEntries(PAGES.map((page) => [page.replace(/\/?index\.html$/, '') || 'es', resolve(root, page)])),
+        },
       },
-    },
-  },
-})
+}))

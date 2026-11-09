@@ -211,6 +211,7 @@ export const translations = {
       },
     ],
     sectionCta: 'Contacta con nosotros',
+    moreInfo: 'Más información',
     process: {
       eyebrow: 'Cómo trabajamos',
       title: 'Un proceso claro, de principio a fin',
@@ -509,6 +510,7 @@ export const translations = {
       },
     ],
     sectionCta: 'Contacta amb nosaltres',
+    moreInfo: 'Més informació',
     process: {
       eyebrow: 'Com treballem',
       title: 'Un procés clar, de principi a fi',

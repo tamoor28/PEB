@@ -21,7 +21,7 @@ const LINKS = [
 const OBSERVED = ['inicio', 'servicios', ...LINKS.map((link) => link.id), 'como-trabajamos']
 
 export default function Header() {
-  const { t } = useLanguage()
+  const { t, homeHref, anchor } = useLanguage()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [hidden, setHidden] = useState(false)
@@ -69,7 +69,7 @@ export default function Header() {
   return (
     <header className={classes.filter(Boolean).join(' ')}>
       <div className="container header__inner">
-        <a href="#inicio" className="header__brand" aria-label={t.nav.home} onClick={close}>
+        <a href={homeHref} className="header__brand" aria-label={t.nav.home} onClick={close}>
           <Logo />
         </a>
 
@@ -78,7 +78,7 @@ export default function Header() {
             {LINKS.map(({ id, key }, index) => (
               <li key={id} style={{ '--i': index }}>
                 <a
-                  href={`#${id}`}
+                  href={anchor(id)}
                   className={`header__link${active === id ? ' is-active' : ''}`}
                   aria-current={active === id ? 'location' : undefined}
                   onClick={close}
@@ -92,7 +92,7 @@ export default function Header() {
             ))}
           </ul>
           <div className="header__mobile-footer">
-            <a href="#contacto" className="btn btn--accent" onClick={close}>
+            <a href={anchor('contacto')} className="btn btn--accent" onClick={close}>
               {t.nav.cta}
               <ArrowRight size={18} aria-hidden="true" />
             </a>
@@ -107,7 +107,7 @@ export default function Header() {
 
         <div className="header__actions">
           <LanguageSwitcher />
-          <a href="#contacto" className="btn btn--dark btn--sm header__cta">
+          <a href={anchor('contacto')} className="btn btn--dark btn--sm header__cta">
             {t.nav.cta}
           </a>
           <button
